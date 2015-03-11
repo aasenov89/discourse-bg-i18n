@@ -1,11 +1,11 @@
-discourse-turkish-i18n
+discourse-bg-i18n
 ======================
 
-Turkish locale files for discourse
+Bulgarian locale files for discourse
 
 Idea based on https://github.com/lidel/discourse-locale-override 
 
-This repo is used to load Turkish localization files while bootstrapping or rebuilding a discourse docker instance.
+This repo is used to load Bulgarian localization files while bootstrapping or rebuilding a discourse docker instance.
 
 You need to modify your app.yml file to get it working. Find the section where after code hooks are listed:
 

@@ -1,0 +1,1659 @@
+# encoding: utf-8
+# This file contains content for the server portion of Discourse used by Ruby
+#
+# To work with us on translations, see:
+# https://www.transifex.com/projects/p/discourse-org/
+#
+# This is a "source" file, which is used by Transifex to get translations for other languages.
+# After this file is changed, it needs to be pushed by a maintainer to Transifex:
+#
+#   tx push -s
+#
+# Read more here: https://meta.discourse.org/t/contribute-a-translation-to-discourse/14882
+#
+# To validate this YAML file after you change it, please paste it into
+# http://yamllint.com/
+
+bg:
+  dates:
+    short_date_no_year: "D MMM"
+    short_date: "D MMM, YYYY"
+    long_date: "MMMM D, YYYY h:mma"
+  title: "Discourse"
+  topics: "Теми"
+  posts: "публикации"
+  loading: "Зареждане"
+  powered_by_html: 'Захранен от <a href="http://www.discourse.org">Discourse</a>, най-добре изглежда с включен JavaScript'
+  log_in: "Вход"
+  via: "%{username} през %{site_name}"
+  is_reserved: "е решен "
+  purge_reason: "Автоматично изтрит като изоставен, неактивен акаунт"
+  disable_remote_images_download_reason: "Изтеглянето на отдалечени изображения беше изключено, защото няма достатъчно място на хард диска."
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      too_long_validation: "е ограничен на %{max} символа ; вие въведохте %{length}."
+      invalid_boolean: "Невалиден булев."
+      taken: "е вече заето"
+      accepted: трябва да се приеме
+      blank: не може да бъде празно
+      present: трябва да се попълни
+      confirmation: "не съвпада %{attribute}"
+      empty: не може да бъде празно
+      equal_to: трябва да бъде равно на %{count}
+      even: трябва да бъде равен
+      exclusion: е запазено
+      greater_than: трябва да бъде по-голямо от %{count}
+      greater_than_or_equal_to: трябва да бъде по-голямо или равно на %{count}
+      inclusion: не е включено в списъка
+      invalid: не невалидно
+      less_than: трябва да бъде по-малко от %{count}
+      less_than_or_equal_to: трябва да бъде по-малко или равно на %{count}
+      not_a_number: не е число
+      not_an_integer: трябва да бъде число
+      odd: трябва да е нечетно
+      record_invalid: 'Валидирането е неуспешно %{errors}'
+      restrict_dependent_destroy:
+        one: "Записът не може да бъде изтрит, защото е зависим от съществуващите  %{record}"
+        many: "Записът не може да бъде изтрит, защото е зависим от съществуващите %{record}"
+      too_long:
+        one: прекалено дълго (трябва да бъде само 1 символ)
+        other: е прекалено дълго (максималния брой символи е %{count})
+      too_short:
+        one: прекалено кратко (минимума е 1 символ)
+        other: е прекалено кратко (миниума е %{count} символи)
+      wrong_length:
+        one: е с грешна дължина (трябва да бъде поне 1 символ)
+        other: е с грешна дължина (трябва да бъде %{count} символа)
+      other_than: "трябва да бъде различно от %{count}"
+    template:
+      body: 'Имаше проблеми със следните полета:'
+      header:
+        one: 1 грешка възпрепятства запазването на този %{model}
+        other: '%{count} грешки възпрепятстват запазването на този %{model} '
+    embed:
+      load_from_remote: "Получи се грешка при зареждането на тази публикация."
+  bulk_invite:
+    file_should_be_csv: "Качваният файл трябва да бъде във csv или txt формат."
+  backup:
+    operation_already_running: "Операцията се изпълнява в момента. Не можеш да започнеш нова точно сега."
+    backup_file_should_be_tar_gz: "Бекъп файлът трябва да бъде .tar.gz архив."
+    not_enough_space_on_disk: "Няма достатъчно свободно място на диска, за да се качи този бекъп."
+  not_logged_in: "Трябва да сте логнат за да правите това."
+  not_found: "Заявеният адрес или ресурс  не може да бъде намерен."
+  invalid_access: "Вие нямате права да разглеждате този ресурс."
+  read_only_mode_enabled: "Сайтът в режим само за четене. Действията са непозволени."
+  too_many_replies:
+    one: "Съжаляваме, но новите потребители са временно са ограничени до 1 отговор във същата публикация."
+    other: "Съжаляваме, но новите потребители са временно са ограничени до %{count}  отговори в същата публикация."
+  embed:
+    start_discussion: "Започване на дискусия "
+    continue: "Продължаване на дискусия"
+    more_replies:
+      one: "още един отговор"
+      other: "%{count} повече отговори"
+    loading: "Зареждане на дискусия..."
+    permalink: "Постоянен адрес"
+    imported_from: "Това е упътваща дискусионна тема за първоначалното влизане в %{link}"
+    in_reply_to: "▶ %{username}"
+    replies:
+      one: "1 отговор"
+      other: "%{count} отговори"
+  too_many_mentions:
+    zero: "Съжаляваме, не може да споменавате други потребители."
+    one: "Съжаляваме, можете да споменете само един друг потребител в публикацията."
+    other: "Съжаляваме, можете да споменете само %{count} потребители в публикацията."
+  too_many_mentions_newuser:
+    zero: "Съжаляваме, новите потребите не могат да споменават други потребители."
+    one: "Съжаляваме, новите потребители могат да споменават само един друг потребител в публикацията."
+    other: "Съжаляваме, новите потребители могат да споменават само %{count} потребители в публикацията."
+  too_many_images:
+    zero: "Съжаляваме, новите потребители не могат да поставят изображения в публикациите."
+    one: "Съжаляваме, новите потребители могат да поставят само едно изображение в публикацията."
+    other: "Съжаляваме, новите потребители могат да поставят само по %{count} изображения в публикацията."
+  too_many_attachments:
+    zero: "Съжаляваме, новите потребители не могат да поставят приставки в публикациите."
+    one: "Съжаляваме, новите потребители могат да поставят само по една приставка в публикацията."
+    other: "Съжаляваме, новите потребители могат да поставят %{count} приставки в публикацията."
+  too_many_links:
+    zero: "Съжаляваме, новите потребители не могат да поставят линкове в публикациите."
+    one: "Съжаляваме, новите потребители могат да поставят само по един линк в публикация."
+    other: "Съжаляваме, новите потребители могат да поставят само %{count} линкове в публикация."
+  spamming_host: "Съжаляваме, не можете да публикувате линк на този хост."
+  user_is_suspended: "Отстранените потребители нямат право да публикуват."
+  just_posted_that: "твърде подобно е на това което скоро сте публикували"
+  has_already_been_used: "вече е заето"
+  invalid_characters: "съдържа невалидни знаци"
+  is_invalid: "невалидно е; опитайте се да бъде малко по-описателно"
+  next_page: "следваща страница →"
+  prev_page: "← предишна страница"
+  page_num: "Страница %{num}"
+  topics_in_category: "Теми в '%{category}' група"
+  rss_posts_in_topic: "RSS поддържа '%{topic}'"
+  rss_topics_in_category: "RSS поддържа темите в '%{category}' категория"
+  author_wrote: "%{author} написа:"
+  num_posts: "Публикации:"
+  num_participants: "Участници:"
+  read_full_topic: "Прочети цялата тема"
+  private_message_abbrev: "ЛС"
+  rss_description:
+    latest: "Последни теми"
+    hot: "Горещи теми"
+  too_late_to_edit: "Това мнение е създадено много отдавна. То вече не може да се променя или  да бъде изтрито."
+  excerpt_image: "изображение"
+  groups:
+    errors:
+      can_not_modify_automatic: "Не може да променяте автоматичната група"
+    default_names:
+      everyone: "всички"
+      admins: "админи"
+      moderators: "модератори"
+      staff: "персонал"
+      trust_level_0: "trust_level_0 "
+      trust_level_1: "trust_level_1 "
+      trust_level_2: "trust_level_2 "
+      trust_level_3: "trust_level_3 "
+      trust_level_4: "trust_level_4 "
+  education:
+    until_posts:
+      one: "1 публикация"
+      other: "%{count} публикации"
+    new-topic: |
+      Добре дошли в %{site_name} &mdash; ** Благодарим Ви за започването на нов разговор!**
+
+      - Заглавието описва ли точно вашата тема? Звучи ли интересно?
+
+      - За какво става дума? Кой би се заинтересувал от него? Защо има значение? На какви отговорности се надявате от страна на общността?
+
+      - Включете в своята тема подходящи за търсене думи така че другите да могат да я "намерят". За да групирате вашата тема с други подобни теми, изберете категория.
+
+      - За повече информация [виж Правилата на Общността](/guidelines). Този панел ще бъде видим до вашето първо %{education_posts_text}.
+    new-reply: "Добре дошли в %{site_name} &mdash; **Благодарим Ви за съдействието!**\n\n- Вашият отговор допринася ли за разговора по някакъв начин?\n\n- Бъдете любезен с вашите колеги от общността.\n\n- Конструктивната критика е добре дошла, но когато се критикуват *идеи*, не хора.\n\nЗа повече информация [виж Правилата на Общността](/guidelines). Този панел ще бъде видим до вашето първо %{education_posts_text}. \n"
+    avatar: |
+      ###  Какво ще кажете за една нова снимка на вашия профил?
+
+      Вече публикувахте няколко теми и отговори, но вашият аватар не е толкова уникален колкото Вас -- той е същият като на всички нови потребители.
+
+      Обмислихте ли ** [да посетите вашия профил](%{profile_path}) и да качите потребителско изображение което да Ви представя?
+
+      Когато всеки има уникален аватар е по-лесно да се следят дискусиите в общността и да се започнат разговори с интересни хора!
+    sequential_replies: |+
+      ### Обмислете отговарянето на няколко публикации наведнъж
+
+      Вместо няколко последователни отговори в тема, моля помислете за един отговор, който съдържа цитати или препратки към предишните публикации.
+
+      Можете да редактирате предишния си отговор за да добавите цитат като маркирате текста и изберете <b>quote reply</b> бутон който се появява.
+
+      За всеки е по-лесно да чете по-задълбочени теми, отколкото кратки индивидуални отговори.
+
+
+
+    dominating_topic: |
+      ### Нека и другите да се присъединят към разговора
+
+      Тази тема определено е важна за Вас &ndash; Вие публикувахте повече от  %{percent}% от отговорите тук.
+
+      Сигурни ли сте, че предоставяте достатъчно възможности и на другите хора да изкажат своите гледни точки?
+    too_many_replies: |
+      ### Вие достигнахте своя лимит за отговори за тази тема
+
+      Съжаляваме, но новите потребители временно са ограничени до %{newuser_max_replies_per_topic} отговори в една и съща тема.
+
+      Вместо добавянето на друг отговор, моля обмислете да редактирате предишните си отговори, или да посетите други теми.
+    reviving_old_topic: |
+      ### Искате да подновите тази тема?
+
+      Последният отговор в тази тема е от преди %{days} дни. Вашият отговор ще изкачи темата в началото на листата и ще уведоми всеки, който преди това е участвал в разговора.
+
+      Сигурни ли сте че искате да продължите този стар разговор?
+  activerecord:
+    attributes:
+      category:
+        name: "Име на категорията"
+      post:
+        raw: "Тяло"
+      user_profile:
+        bio_raw: "За мен"
+    errors:
+      messages:
+        is_invalid: "невалидно е; опитайте се да бъде малко по-описателно"
+        has_already_been_used: "вече е заето"
+      models:
+        topic:
+          attributes:
+            base:
+              warning_requires_pm: "Можете да прикачите предупреждения само към личните съобщения."
+              too_many_users: "Можете да изпращате предупреждения само до един потребител в даден момент."
+              cant_send_pm: "Съжаляваме, не можете да изпратите лично съобщение на този потребител."
+              no_user_selected: "Трябва да изберете валиден потребител."
+        user:
+          attributes:
+            password:
+              common: "е една от 10000 най-често използвани пароли. Моля използвайте по-сигурна парола."
+              same_as_username: "е същата като вашето потребителско име. Моля използвайте по-сигурна парола."
+              same_as_email: "е същата като вашия email. Моля използвайте по-сигурна парола."
+            ip_address:
+              signup_not_allowed: "Вписването не е разрешено от този акаунт."
+        color_scheme_color:
+          attributes:
+            hex:
+              invalid: "този цвят не е валиден "
+  user_profile:
+    no_info_me: "<div class='missing-profile'> полето За мен в профила Ви в момента е празно,  <a href='/users/%{username_lower}/preferences/about-me'> бихте ли искали да го попълните? </a></div>"
+    no_info_other: "<div class='missing-profile'>%{name} в полето За мен на техния профил все още не е въвъдено нищо </div>"
+  vip_category_name: "Салон"
+  vip_category_description: "Категоята е само за членове с ниво на доверие 3 и по-високо."
+  meta_category_name: "Мета"
+  meta_category_description: "Дискусия за сайта, неговата организация, как той работи, и как можем да го подобрим."
+  staff_category_name: "Персонал"
+  staff_category_description: "Частна категория за дискусии на персонала. Темите са видими само за админи и модератори."
+  assets_topic_body: "Това е перманентна тема, видима само за персонала, за съхраняване на снимки и файлове, използвани за дизайна на сайта. Не я изтривайте!Ето как:\n\n\n1. Отговорете на тази тема. \n 2. Качете тук всички изображения, които искате да използвате за лого, уеб икони и така нататък. (Използвайте иконата за качване от лентата с инструменти в редактора на публикации или \"дръпни и пусни\".) \n 3. Публикувайте вашия отговор. \n4. Кликнете с десен бутон върху изображението, за да получите път към каченото изображение или кликнете върху иконата за редактиране, за да редактирате вашия пост и да извлечете пътеките към изображенията. Копирайте пътеките към изображението.\n 5. Поствете пътеките на изображението в [basic settings](/admin/site_settings/category/required).\n\n\nАко Ви се налага да ползвате друг тип файлове , променете `authorized_extensions` в in the [file settings](/admin/site_settings/category/files). "
+  lounge_welcome:
+    title: "Добре дошли в Салона"
+    body: "\nЧестито! :confetti_ball:\n\nАко можете да видите тази тема, вие сте повишен в **редовен** (trust level 3)\n\nСега Вие можете &hellip; \n\n* Да променяте заглавието на всяка тема\n* Да сменяте категорията на всяка тема \n* Имате си свои последователи  ([automatic nofollow](http://en.wikipedia.org/wiki/Nofollow) is removed) \n* Имате достъп до частната Lounge категория, видима само за потребители от trust level 3 и по-високо\n* Скриване на спама с един сигнал\n\nЕто и  [current list of fellow regulars](/badges/3/regular). Не забравяйте да кажете здрасти.\n\nБлагодарим Ви за това, че сте важна част от тази общност!\n\n(За повече информация относно trust levels, [see this topic][trust]. Моля имайте впредвид, че редовни остават само членовете, които с течение на времето продължават да отговарят на изискванията.)\n\n[trust]: https://meta.discourse.org/t/what-do-user-trust-levels-do/4924\n"
+  category:
+    topic_prefix: "За %{category} категория"
+    replace_paragraph: "[Заменете този параграф с кратко описание на новата категория. Това описание ще се вижда в списъка за категориите, затова се постарайте да не надвишава 200 символа. Преди да редактирате този текст или да създадете теми, тази категория няма да се появи на страницата с категориите.]"
+    post_template: "%{replace_paragraph}\n\nВ следващите параграфи въведете по-подробно описание на категорията, както и възможни правила и насоки за публикуване.\n\nНякои аспекти, които трябва да се вземат впредвид: \n\nЗа какво е нужна тази категория? Защо хората трябва да изберат тази категория за техните теми?\n\nС какво тази категория е по-различна от тези които вече са създадени?\n\nНуждаем ли се от тази категория?\n\nСтрува ли си да я обединим с други категории, или да я разделим на няколко?\n"
+    errors:
+      uncategorized_parent: "Некатегоризиран не може да има основна категория"
+      self_parent: "Една подкатегория не може да бъде родител сама на себе си."
+      depth: "Не можете да създадете една подкатегория под друга такава"
+    cannot_delete:
+      uncategorized: "Не можете да изтриете Некатегоризиран"
+      has_subcategories: "Не можете да изтриете тази категория, защото има подкатегории."
+      topic_exists:
+        one: "Не можете да изтриете тази категория, защото има 1 тема. Най-старата тема е %{topic_link}."
+        other: "Не можете да изтриете тази категория, защото има %{count} теми. Най-старата тема е %{topic_link}. "
+      topic_exists_no_oldest: "Не можете да изтриете тази категория, защото броят на темите е %{count}."
+  trust_levels:
+    newuser:
+      title: "нов потребител"
+    basic:
+      title: "основен потребител"
+    regular:
+      title: "член"
+    leader:
+      title: "редовен"
+    elder:
+      title: "лидер"
+    change_failed_explanation: "Опитахте се да понижите %{user_name} на '%{new_trust_level}'. Обаче тяхното ниво на доверие е вече '%{current_trust_level}'. %{user_name} ще остане на '%{current_trust_level}' - ако искате да понижите потребителското ниво, ниво на доверие първо"
+  rate_limiter:
+    slow_down: "Извършихте това действие твърде много пъти, моля опитайте по-късно"
+    too_many_requests: "Имаме дневен лимит за това колко пъти може да бъде извършено това действие. Моля изчакайте %{time_left}  преди да опитате пак."
+    hours:
+      one: "1 час"
+      other: "%{count} часове "
+    minutes:
+      one: "1 минута"
+      other: "%{count} минути "
+    seconds:
+      one: "1 секунда"
+      other: "%{count} секунди "
+  datetime:
+    distance_in_words:
+      half_a_minute: "< 1m"
+      less_than_x_seconds:
+        one: "< 1с"
+        other: "< %{count}s"
+      x_seconds:
+        one: "1s"
+        other: "%{count}s"
+      less_than_x_minutes:
+        one: "< 1m"
+        other: "< %{count}m"
+      x_minutes:
+        one: "1m"
+        other: "%{count}m"
+      about_x_hours:
+        one: "1h"
+        other: "%{count}h"
+      x_days:
+        one: "1d"
+        other: "%{count}d"
+      about_x_months:
+        one: "1mon "
+        other: "%{count}mon"
+      x_months:
+        one: "1mon "
+        other: "%{count}mon "
+      about_x_years:
+        one: "1y "
+        other: "%{count}y "
+      over_x_years:
+        one: "> 1y "
+        other: "> %{count}y "
+      almost_x_years:
+        one: "1y"
+        other: "%{count}y"
+    distance_in_words_verbose:
+      half_a_minute: "преди малко"
+      less_than_x_seconds:
+        one: "преди малко"
+        other: "преди малко"
+      x_seconds:
+        one: "преди 1 секунда"
+        other: "преди %{count} секунди"
+      less_than_x_minutes:
+        one: "по малко от 1 минута"
+        other: "преди по-малко от %{count} минути"
+      x_minutes:
+        one: "преди 1 минута"
+        other: "преди %{count} минути"
+      about_x_hours:
+        one: "преди 1 час"
+        other: "преди %{count} часа"
+      x_days:
+        one: "преди 1 ден"
+        other: "преди %{count} дни"
+      about_x_months:
+        one: "преди около 1 месец"
+        other: "преди около %{count} месеца"
+      x_months:
+        one: "преди 1 месец"
+        other: "преди %{count} месеца"
+      about_x_years:
+        one: "преди около 1 година"
+        other: "преди около  %{count} години "
+      over_x_years:
+        one: "преди повече от 1 година "
+        other: "преди повече от %{count} години "
+      almost_x_years:
+        one: "преди почти 1 година"
+        other: "преди почти %{count} години"
+  password_reset:
+    no_token: "За съжаление времето изтече. Моля опитайте да зададете наново паролата."
+    choose_new: "Моля изберете нова парола"
+    choose: "Моля изберете парола"
+    update: 'Обновете паролата'
+    save: 'Задайте парола'
+    title: 'Смяна на паролата'
+    success: "Вие успешно променихте вашата парола и в момента сте логнати."
+    success_unapproved: "Вие успешно променихте вашата парола."
+    continue: "Продължете към %{site_name}"
+  change_email:
+    confirmed: "Вашият имейл беше актуализиран."
+    please_continue: "Продължете към %{site_name}"
+    error: "Възникна грешка при промяната на вашия имейл адрес. Може би адресът вече се използва?"
+  activation:
+    action: "Активирайте вашия акаунт"
+    already_done: "Съжаляваме, този линк за потвърждаване на акаунта вече е невалиден. Може би вашият акаунт е вече активен?"
+    please_continue: "Вашият нов акаунт е вече потвърден; ще бъдете пренасочени към началната страница."
+    continue_button: "Продължете към %{site_name}"
+    welcome_to: "Добре дошли в %{site_name}!"
+    approval_required: "Акаунтът Ви трябва да бъде одобрен от модератор преди да получите достъп до този форум. Ще получите имейл когато акаунтът Ви е одобрен!"
+  post_action_types:
+    off_topic:
+      title: 'Оф-топик'
+      description: 'Тази публикация не е уместна за текущата дискусия, нейното заглавие и първа публикация, и трябва да бъде преместена на друго място.'
+      long_form: 'Маркирахте това като оф-топик'
+    spam:
+      title: 'Спам'
+      description: 'Този пост е реклама.Той е промоционален, не е полезен и не се отнася към текущата тема.'
+      long_form: 'маркирахте това като спам'
+      email_title: '"%{title}" беше маркиран като спам'
+      email_body: "%{link}\n\n%{message}"
+    inappropriate:
+      title: 'Неприлично'
+      description: 'Този пост има съдържание, което всеки разумен човек би сметнал за обидно и оскърбително  of <a href="/guidelines">Правилата на Общността</a>.'
+      long_form: 'Маркирахте това като неприлично'
+    notify_user:
+      title: 'Лично съобщение @{{username}}'
+      description: 'Тази публикация съдържа нещо,за което искам лично да говоря с автора. Не съдържа сигнал.'
+      long_form: 'лично оведомен потребител'
+      email_title: 'Вашата публикация в "%{title}"'
+      email_body: "%{link}\n\n\n%{message}"
+    notify_moderators:
+      title: "Нещо друго"
+      description: 'Този пост изисква вниманието на модератор поради различна от изброените по-горе причини.'
+      long_form: 'сигнал до модератор'
+      email_title: 'Постът "%{title}" изисква вниманието на модератор'
+      email_body: "%{link}\n\n%{message}"
+    bookmark:
+      title: 'Отметка'
+      description: 'Добавете тази публикация в Отметки'
+      long_form: 'Добавихте тази публикация в Отметки'
+    like:
+      title: 'Харесвам'
+      description: 'Харесайте тази публикация'
+      long_form: 'харесаха това'
+    vote:
+      title: 'Гласуване'
+      description: 'Гласувайте за тази публикация'
+      long_form: 'Вие гласувахте за тази публикация'
+  topic_flag_types:
+    spam:
+      title: 'Спам'
+      description: 'Този пост е реклама.Той е промоционален, не е полезен или не се отнася към текущата тема.'
+      long_form: 'маркирахте това като спам'
+    inappropriate:
+      title: 'Неприлично'
+      description: 'Този пост има съдържание, което всеки разумен човек би сметнал за обидно и оскърбително , или нарушава of <a href="/guidelines">виж Правилата на Общността</a>.'
+      long_form: 'Маркирано като неприлично'
+    notify_moderators:
+      title: "Нещо друго"
+      description: 'Тази тема изисква вниманието на модератор, базирано на <a href="/guidelines">guidelines</a>, <a href="%{tos_url}">TOS</a> или по друга причина различна от посочените.'
+      long_form: 'сигнал до модератор'
+      email_title: 'Постът "%{title}" изисква вниманието на модератор'
+      email_body: "%{link}\n\n\n%{message}"
+  flagging:
+    you_must_edit: '<p> За вашата публикация беше сигнализирано от общността. Моля <a href="/my/private-messages"> вижте вашите лични съобщения </a>.</p>'
+    user_must_edit: '<p> За тази публикация беше сигнализирано от общността и е временно скрита. .</p>'
+  archetypes:
+    regular:
+      title: "Редовна Тема"
+    banner:
+      message:
+        make: "Тази тема сега е банер. Тя ще се появява най-отгоре на всяка страница докато не бъде премахната от потребителя."
+        remove: "Тази тема вече не е банер. Тя няма да се появява повече най-отгоре на всяка страница."
+  unsubscribed:
+    title: 'Отписан'
+    description: "Вие бяхте отписан. Няма да се свържем с Вас отново!"
+    oops: "В случай, че не  сте искали да направите това, кликнете по-долу."
+    error: "Грешка при отписване "
+    preferences_link: "Можете също така да се отпишете от справочника с имейли на вашата <a href='/my/preferences'>преференциална страница</a>"
+    different_user_description: "Вие се логнахте като друг потребител - не като този, на когото е изпратен имейл с новости. Моля опитайте да се логнете отново."
+    not_found_description: "Съжаляваме, не можем да Ви отпишем. Вероятно линка във вашия имейл е изтекъл."
+  resubscribe:
+    action: "Повторно абониране "
+    title: "Повторно абониран! "
+    description: "Вие бяхте отново абониран. "
+  reports:
+    visits:
+      title: "Потребителски посещения "
+      xaxis: "Ден"
+      yaxis: "Брой на посещенията"
+    signups:
+      title: "Нови потребители"
+      xaxis: "Ден"
+      yaxis: "Брой нови потребители"
+    topics:
+      title: "Теми"
+      xaxis: "Ден"
+      yaxis: "Брой нови теми."
+    posts:
+      title: "Публикации"
+      xaxis: "Ден"
+      yaxis: "Брой нови публикации."
+    likes:
+      title: "Харесвания"
+      xaxis: "Ден"
+      yaxis: "Брой нови харесвания"
+    flags:
+      title: "Сигнали"
+      xaxis: "Ден"
+      yaxis: "Брой сигнали"
+    bookmarks:
+      title: "Отметки"
+      xaxis: "Ден"
+      yaxis: "Брой нови отметки"
+    starred:
+      title: "Любими"
+      xaxis: "Ден"
+      yaxis: "Брой нови любими теми"
+    users_by_trust_level:
+      title: "Потребители с  Ниво на доверие"
+      xaxis: "Ниво на Доверие"
+      yaxis: "Брой потребители"
+    emails:
+      title: "Имейлите са изпратени"
+      xaxis: "Ден"
+      yaxis: "Брой имейли"
+    user_to_user_private_messages:
+      title: "Лични съобщения"
+      xaxis: "Ден"
+      yaxis: "Брой лични съобщения"
+    system_private_messages:
+      title: "Система"
+      xaxis: "Ден"
+      yaxis: "Брой лични съобщения"
+    moderator_warning_private_messages:
+      title: "Предупреждение от Модератор"
+      xaxis: "Ден"
+      yaxis: "Брой лични съобщения"
+    notify_moderators_private_messages:
+      title: "Уведоми Модераторите"
+      xaxis: "Ден"
+      yaxis: "Брой лични съобщения"
+    notify_user_private_messages:
+      title: "Уведоми потребител"
+      xaxis: "Ден"
+      yaxis: "Брой лични съобщения "
+    top_referrers:
+      title: "Топ Референти "
+      xaxis: "Потребител"
+      num_clicks: "Кликвания"
+      num_topics: "Теми"
+    top_traffic_sources:
+      title: "Топ източници на трафик "
+      xaxis: "Домейн"
+      num_clicks: "Кликвания"
+      num_topics: "Теми"
+      num_users: "Потребители"
+    top_referred_topics:
+      title: "Top Посочени Теми "
+      xaxis: "Тема"
+      num_clicks: "Кликвания"
+    page_view_anon_reqs:
+      title: "Анонимен"
+      xaxis: "Ден"
+      yaxis: "Анонимни API заявки"
+    page_view_logged_in_reqs:
+      title: "Вписани"
+      xaxis: "Ден"
+      yaxis: "API заявки от логнати потребители"
+    page_view_crawler_reqs:
+      title: "Роботи"
+      xaxis: "Ден"
+      yaxis: "API заявки от ботове"
+    page_view_total_reqs:
+      title: "Общо"
+      xaxis: "Ден"
+      yaxis: "Общо API заявки"
+    http_background_reqs:
+      title: "Фон"
+      xaxis: "Ден"
+      yaxis: "Заявки използвани за обновяване и проследяване в реално време"
+    http_2xx_reqs:
+      title: "Статус 2xx (OK)"
+      xaxis: "Ден"
+      yaxis: "Успешни заявки (Статус 2xx)"
+    http_3xx_reqs:
+      title: "HTTP 3xx (Redirect)"
+      xaxis: "Ден"
+      yaxis: "Редирект заявки (Status 3xx)"
+    http_4xx_reqs:
+      title: "HTTP 4xx (Client Error)"
+      xaxis: "Ден"
+      yaxis: "Client Errors (Status 4xx)"
+    http_5xx_reqs:
+      title: "HTTP 5xx (Server Error)"
+      xaxis: "Ден"
+      yaxis: "Server Errors (Status 5xx)"
+    http_total_reqs:
+      title: "Общо"
+      xaxis: "Ден"
+      yaxis: "Общо заявки"
+  dashboard:
+    rails_env_warning: "Вашият сървър е в % {env} режим."
+    ruby_version_warning: "Вие изпозвате Ruby 2.0.0 версия, за която се знае, че има проблеми. Моля патчнете до 247 или по-голяма. "
+    host_names_warning: "Вашият config/database.yml файл използва по подразбиране localhost за hostname. Обновете, за да използва името на вашия сайт за hostname. "
+    gc_warning: 'Вашият сървър използва default ruby garbage collection parameters, които не Ви гарантират най-добрата производителност. Прочетете тази тема за настройки <a href="http://meta.discourse.org/t/tuning-ruby-and-rails-for-discourse/4126" target="_blank">Tuning Ruby and Rails for Discourse</a>.'
+    sidekiq_warning: 'Sidekiq не работи. Много задачи, като изпращане на имейли, се изпълняват несинхронизирано от sidekiq.  Моля убедете се, че поне един процес sidekiq работи.  <a href="https://github.com/mperham/sidekiq" target="_blank">Научете повече за Sidekiq тук</a>.'
+    queue_size_warning: 'Броят на чакащите задачи е %{queue_size}, и е голям. Това може да означава проблем с процеса(сите)  Sidekiq, или може да се наложи да добавите още Sidekiq работници.'
+    memory_warning: 'Вашият сървър използва по-малко от 1 ГБ от общата памет. Препоръчва се най-малко 1 ГБ.'
+    enable_google_logins_warning: "Вие използвате неодобрената версия на Google's OpenID authentication. Google ще прекрати поддръжката ѝ за OpenID от 20 април, 2015. Започнете да използвате Google OAuth2 възможно най-скоро.  <a href='https://meta.discourse.org/t/configuring-google-login-for-discourse/15858' target='_blank'>За повече информация вижте тук</a>"
+    both_googles_warning: "И двете опции enable_google_logins и enable_google_oauth2_logins са включени в настройките на сайта. Изключете enable_google_logins."
+    google_oauth2_config_warning: 'Сървърът е конфигуриран да позволи регистрация и вписване с Google OAuth2 (enable_google_oauth2_logins), но client id и client secret values не са определени. Отидете на <a href="/admin/site_settings">Настройките на сайта</a> и актуализирайте настройките. <a href="https://meta.discourse.org/t/configuring-google-login-for-discourse/15858" target="_blank"">За повече информация вижте тук</a>.'
+    facebook_config_warning: 'Сървърът е конфигуриран да позволи регистрация и вписване с Facebook (enable_facebook_logins), app id и app secret values  не са изпратени. Отидете на  <a href="/admin/site_settings"> Настройките на сайта </a> и обновете настройките.<a href="https://meta.discourse.org/t/configuring-facebook-login-for-discourse/13394" target="_blank">За повече информация вижте тук</a>.'
+    twitter_config_warning: 'Сървърът е конфигуриран да позволи регистрация и вписване със Twitter (enable_twitter_logins),но the key and secret values не са изпратени. Отидете на <a href="/admin/site_settings">Настройките на сайта</a> и обновете настройките. <a href="https://meta.discourse.org/t/configuring-twitter-login-for-discourse/13395" target="_blank"> За повече информация вижте тук</a>.'
+    github_config_warning: 'Сървърът е конфигуриран да позволи регистрация и вписване с GitHub (enable_github_logins), но client id и secret values не са изпратени. Отидете на <a href="/admin/site_settings">Настройките на сайта</a> и обновете настройките<a href="https://meta.discourse.org/t/configuring-github-login-for-discourse/13745" target="_blank">За повече информация вижте тук</a>.'
+    s3_config_warning: 'Сървърът е конфигуриран за качване на файлове в s3, но ако не са зададени следните настройки: s3_access_key_id, s3_secret_access_key or s3_upload_bucket. Отидете на <a href="/admin/site_settings"> Настройките на сайта</a> и обновете настройките.<a href="http://meta.discourse.org/t/how-to-set-up-image-uploads-to-s3/7229" target="_blank"> За повече информация "Как да поставите каченото изображение в S3?" вижте тук</a>.'
+    s3_backup_config_warning: 'Сървърът е конфигуриран за качване на бекъпи в s3, но ако не са зададени следните настройки:s3_access_key_id, s3_secret_access_key or s3_backup_bucket.Отидете на <a href="/admin/site_settings">Настройките на сайта</a> и обновете настройките.<a href="http://meta.discourse.org/t/how-to-set-up-image-uploads-to-s3/7229" target="_blank">За повече информация "Как да поставите каченото изображение в S3?" вижте тук</a>.'
+    image_magick_warning: 'Сървърът е конфигуриран за създаване на умалени изображения на оригиналните, но ImageMagick не е инсталиран. Инсталирайте ImageMagick използвайки вашия системен мениджър или <a href="http://www.imagemagick.org/script/binary-releases.php" target="_blank">изтеглете най-новата версия</a>.'
+    failing_emails_warning: 'Провалени  %{num_failed_jobs} имейл задачи. Проверете файла config/discourse.conf за да се уверите, че имейл настройките са правилни. <a href="/sidekiq/retries" target="_blank">Вижте провалените имейл задачи в Sidekiq</a>.'
+    default_logo_warning: "Задайте графичните лога на вашия сайт. Обновете logo_url, logo_small_url, и favicon_url в <a href='/admin/site_settings'>Настройките на сайта</a>."
+    contact_email_missing: "Въведете имейл адрес за контакти, в случай на възникнали неотложни въпроси за вашия сайт. Обновете го в  <a href='/admin/site_settings'>Настройки на сайта</a>. "
+    contact_email_invalid: "Имейла за връзка на сайта е невалиден. Актуализирайте го на  <a href='/admin/site_settings'>Site Settings</a>."
+    title_nag: "Въведете името на вашия сайт. Актуализирайте заглавието на <a href='/admin/site_settings'>Настройки на сайта</a>."
+    site_description_missing: "Въведете с едно изречение описание на вашия сайт, което ще излезе при резултатите от търсенето. Актуализирайте site_description in <a href='/admin/site_settings'>Настройки на сайта</a>."
+    consumer_email_warning: "Вашият сайт е конфигуриран за използване на Gmail (или други имейл услуги) за изпращане на имейли.<a href='http://support.google.com/a/bin/answer.py?hl=en&answer=166852' target='_blank'>Gmail ограничава колко имейли можете да изпращате</a>. За гарантирани услуги, обмислете използването на друг имейл доставчик като mandrill.com."
+    site_contact_username_warning: "Въведете име на любезен член от екипа, от което да бъдат изпращани важните автоматизирани съобщения. Обновете  site_contact_username в <a href='/admin/site_settings'>Настройки на сайта</a>."
+    notification_email_warning: "Уведомителните писма във вашия домейн са изпращани от невалиден имейл адрес; доставката на имейли ще бъде неустойчива и ненадеждна. Моля задайте notification_email до валиден местен имейл адрес в <a href='/admin/site_settings'>Настройки на сайта</a>."
+  content_types:
+    education_new_reply:
+      title: "Обучение за нови потребители: Първи отговори"
+      description: "Когато нов потребител започва да създава първите си два отговора, над полето за текст автоматично ще се появят съвети."
+    education_new_topic:
+      title: "Обучение за нови потребители: Първи теми"
+      description: "Когато нов потребител започва да създава първите си две теми, над полето за текст автоматично ще се появят съвети."
+    usage_tips:
+      title: "Ръководство за нови потребители"
+      description: "Ръководство и необходима информация за нови потребители."
+    welcome_user:
+      title: "Добре дошли: Нов Потребител"
+      description: "След регистрацията на всеки нов потребител автоматично ще бъде изпратено лично съобщение."
+    welcome_invite:
+      title: "Добре дошли: Поканен Потребител"
+      description: "След приемане на поканата за участие от друг потребител, на новия потребител автоматично ще бъде изпратено лично съобщение."
+    login_required_welcome_message:
+      title: "Вписването изисква: Приветствие"
+      description: "Приветствието се показва на потребители, които не са логнати ако настройката 'login required' е активирана."
+    login_required:
+      title: "Вписването изисква: Начална страница"
+      description: "Текстът се показва за неоторизирани потребители когато се изисква вписване в сайта."
+    head:
+      title: "Заглавие на  HTML"
+      description: "HTML който ще бъде добавен  в <head></head> тагове."
+    top:
+      title: "Горната част на страниците "
+      description: "HTML ще бъде добавен в началото на страницата (след заглавието, преди панела за навигация или заглавието на темата)."
+    bottom:
+      title: "Долната част на страниците"
+      description: "HTML който ще бъде добавен преди </body> таг."
+  site_settings:
+    censored_words: "Думите които ще бъдат автоматично заменени с &#9632;&#9632;&#9632;&#9632;"
+    delete_old_hidden_posts: "Автоматично изтриване на всички скрити постове, които остават скрити за повече от 30 дни."
+    default_locale: "Езикът по подразбиране на тази Discourse инстанция (ISO 639-1 Code)"
+    allow_user_locale: "Позволи на потребителите да избират език на интерфейса"
+    min_post_length: "Минимално допустимо количество символи в едно съобщение"
+    min_private_message_post_length: "Минимално допустимо количество символи в едно лично съобщение"
+    max_post_length: "Максимално допустимо количество символи в едно съобщение"
+    min_topic_title_length: "Минимално допустимо количество символи в името на темата"
+    max_topic_title_length: "Максимално допустимо количество символи в името на темата"
+    min_private_message_title_length: "Минимално допустимо количество символи в заглавието на личното съобщение"
+    min_search_term_length: "Минимално допустимо количество символи в заявката за търсене"
+    allow_uncategorized_topics: "Позволи темите да бъдат създадени без категория."
+    uncategorized_description: "Описание на некатегоризираната категория. Ще бъде скрито ако няма описание."
+    allow_duplicate_topic_titles: "Позволи теми с идентични, дублиращи се заглавия."
+    unique_posts_mins: "Колко минути са необходими, за да може потребителя да направи отново публикация със същото съдържание"
+    educate_until_posts: "Когато потребителят започне да пише своите първи (n) публикации, покажи поп-ъп панела за \"обучение на нови потребители\" в \"composer\" панела. "
+    title: "Наименованието на този сайт , както е използвано в заглавния маркер."
+    site_description: "Опишете този сайт с едно изречение като използвате мета описателен таг."
+    contact_email: "Имейл адрес на ключово лице за връзка, отговорно за този сайт. Използван за важни известия като необработени сигнали, както и за връзка при спешни случаи. "
+    contact_url: "Контакт URL за този сайт. Използва се в /about контакт формата при спешни случаи."
+    queue_jobs: "САМО ЗА РАЗРАБОТЧИЦИ! ВНИМАНИЕ! По подразбиране, асинхронно се извършват задачи в sidekiq. Ако настройката е деактивирана, вашия сайт ще бъде повреден."
+    crawl_images: "Възстановете изображенията от отдалечения URLs,  за да въведете размери с правилната дължина и ширина."
+    download_remote_images_to_local: "Конвертирайте отдалечените изображения в местни изображения като ги свалите; това ще предотврати повредата им."
+    download_remote_images_threshold: "Минимум необходимо дисково пространство за изтеглянето на отдалечените изображения ( в проценти)"
+    disabled_image_download_domains: "Отдалечените изображения никога няма да бъдат изтеглени от тези домейни. Разделен със знака \"|\" списък."
+    ninja_edit_window: "За(n) секунди след публикуването , системата няма да запише нова версия в историята на публикациите."
+    post_edit_time_limit: "Авторът може да промени или изтрие своя пост (n) минути след публикацията. Задайте 0 за постоянно."
+    edit_history_visible_to_public: "Позволи на всички потребители да видят предишните версии на публикацията. Ако е деактивитано, историята на публикациите ще бъде видима само за членовете на персонала. "
+    delete_removed_posts_after: "Публикации, които са премахнати от автор ще бъдат автоматично  изтрити след (n) часа. Ако е зададено 0, публикациите ще бъдат изтрити веднага."
+    max_image_width: "Максимална ширина на умалените изображения в публикацията"
+    max_image_height: "Максимална височина на умалените изображения в публикаципта"
+    category_featured_topics: "Количество теми показани за една категория на Страницата с категориите. След промяната на тази стойност, ще отнеме 15 минути за обновяване на Страницата с категории."
+    show_subcategory_list: "Показване на списък от подкатегории, вместо списък от теми, когато се влезе в подкатегория."
+    fixed_category_positions: "Ако е отметнато, ще можете да подредите категориите в определен ред. Ако не е, категориите ще бъдат подредени според нивото им на активност."
+    add_rel_nofollow_to_user_content: "Добави \"rel nofollow\" към всички връзки с изключение на вътрешните ( включително домейн майките). Промяната на тази настройка изисква актуализация на всички публикации със \"rake posts:rebake\""
+    exclude_rel_nofollow_domains: "Разделен със знака \"|\" списък на домейните, в който „nofollow\" не е добавено (tld.com автоматично ще задейства sub.tld.com )"
+    post_excerpt_maxlength: "Максимална дължина на откъс / резюме от публикацията."
+    post_onebox_maxlength: "Максимална дължина на oneboxed Discourse публикация в писмени знаци."
+    onebox_domains_whitelist: "Списък с домейните, разрешени за oneboxing; тези домейни трябва да поддържат OpenGraph или oEmbed. Тествайте ги на http://iframely.com/debug"
+    logo_url: " Ако оставите празно мястото на логото в горния ляв ъгъл на вашия сайт, ще бъде показано заглавието на сайта ."
+    digest_logo_url: "Използвано е алтернативно лого в горния край на имейл дайджеста на вашия сайт. Ако го оставите празно, ще бъде използвано `logo_url`. например: http://example.com/logo.png"
+    logo_small_url: "Ако оставите празно мястото на малкото лого в горния ляв ъгъл на вашия сайт, което е видимо при превъртане надолу, ще бъде показан началния глиф. "
+    favicon_url: "В интерес на вашия сайт, вижте http://en.wikipedia.org/wiki/Favicon"
+    mobile_logo_url: "Фиксирана позиция на логото в горния ляв ъгъл на вашия мобилен сайт. Ако го оставите празно, ще бъде използвано заглавието на сайта."
+    apple_touch_icon_url: "Иконата се използва за Apple сензорни устройства. Препоръчителният размер е  144px по 144px"
+    notification_email: "Подател: имейлът се използва при изпращане на всички системни съобщения. Посоченият тук домейн трябва да се конфигурира правилно със SPF, DKIM и PTR данни за успешна доставка."
+    email_custom_headers: "Разделен със знака \"|\" списък от персонализирани имейл хедъри. "
+    email_subject: "Персонализиран формат на темата за стандартни имейли. Виж https://meta.discourse.org/t/customize-subject-format-for-standard-emails/20801"
+    use_https: "Какъв трябва да бъде пълния URL  сайта (Discourse.base_url)  - http или https? Не показвай това освен ако HTTPS е вече инсталирано и работи! "
+    summary_score_threshold: "Минимална оценка необходима за една публикация, за да бъде включена в \"Обобщи тази тема\""
+    summary_posts_required: "Минимум публикации в темата преди \"Обобщи тази тема\" да бъде активирано"
+    summary_likes_required: "Минимум харесвания в темата преди \"Обобщи тази тема\" да бъде активирано"
+    summary_percent_filter: "Когато потребителят кликне върху \"Обобщи тази тема\", се показват % от най-добрите публикации "
+    summary_max_results: "Максимум публикации върнати от \"Обобщи тази тема\""
+    enable_private_messages: "Разреши на потребители от ниво на доверие 1 да създават лични съобщения и да отговарят на лични съобщения"
+    enable_long_polling: "Системата за обработка на известия, да използва long polling - заявки с дълго изчакване / дълъг интервал "
+    long_polling_base_url: "Основен URL използван за long polling - проверка на дълги интервали (когато се използва CDN за динамично съдръжание, уверете се, че тази стойност е настроена към основното съдържание) Например: http://origin.site.com"
+    long_polling_interval: "Времето, през което сървърът трябва да изчака преди да отговори на клиентите, когато няма данни за изпращане (влезли потребители само)"
+    polling_interval: "Когато няма \"long polling\", колко често логнатите потребители трябва да правят заявка към сървъра  в милисекунди"
+    anon_polling_interval: "Колко често трябва анонимни клиенти да правят заявка към сървъра  в милисекунди"
+    background_polling_interval: "Колко често трябва клиентите да правят заявка към сървъра в милисекунди (когато прозорецът е на заден план)"
+    auto_track_topics_after: "Общ брой милисекунди по подразбиране преди да се стартира автоматичното проследяване на темата, през които потребителите могат да я отхвърлят ( 0-винаги, -1-никога) "
+    new_topic_duration_minutes: "Общ брой минути по подразбиране, по време на които темата е разглеждана като нова и потребителите могат да я отхвърлят (-1 - винаги, -2 за последно посещение)"
+    flags_required_to_hide_post: "Брой сигнали, при който публикацията автоматично ще бъде скрита и ще бъде изпратено ЛС на потребителя ( 0 - никога)"
+    cooldown_minutes_after_hiding_posts: "Брой минути, през които потребителя трябва да чака,  преди да може да редактира скрита заради потребителско сигнализиране публикация "
+    max_topics_in_first_day: "Максимален брой теми, който е възможен потребителя да създаде през първия си ден в сайта"
+    max_replies_in_first_day: "Максимален брой отговори, който е възможен потребителя да създаде през първия си ден в сайта"
+    num_flags_to_block_new_user: "Ако за публикациите на нов потребител са получени прекалено много спам сигнали от  num_users_to_block_new_user от различни потребители, скрий публикациите и прекрати публикуването за в бъдеще. 0 за деактивиране"
+    num_users_to_block_new_user: "Ако за публикациите на нов потребител са получени спам сигнали от прекалено много различни потребители, скрий публикациите и прекрати публикуването за в бъдеще. 0 за деактивиране"
+    notify_mods_when_user_blocked: "Ако даден потребител е блокиран автоматично, изпрати съобщение до всички модератори."
+    flag_sockpuppets: "Ако нов потребител отговори на тема от същия IP адрес като на новия потребител, който е започнал темата, маркирайте и двете публикации като потенциален спам."
+    traditional_markdown_linebreaks: "Използвайте стандартния метод за пренасяне на нов ред в Markdown, който изисква два интервала за пренасянето на нов ред."
+    post_undo_action_window_mins: "Брой минути, през които потребителите могат да отменят своите действия в публикацията ( харесване, сигнал, и т.н.) "
+    must_approve_users: "Персоналът трябва да одобри всички потребителски акаунти преди да им бъде даден достъп до сайта."
+    ga_tracking_code: "Google анализ (ga.js) проследяващ код напр.: UA-12345678-9; see http://google.com/analytics"
+    ga_domain_name: "Google анализ (ga.js) име на домейн, напр, mysite.com; see http://google.com/analytics"
+    ga_universal_tracking_code: "Google универсален анализ (analytics.js) проследяващ код, напр.: UA-12345678-9; see http://google.com/analytics"
+    ga_universal_domain_name: "Google универсален анализ (analytics.js) име на домейн, напр.: mysite.com; вижте http://google.com/analytics"
+    enable_escaped_fragments: "Върни се към Google's Ajax-Crawling API ако не е открита програма за уеб обхождане. Виж https://support.google.com/webmasters/answer/174992?hl=en"
+    enable_noscript_support: "Разрешете поддръжката чрез noscript таг за търсачките"
+    allow_moderators_to_create_categories: "Позволи на модераторите да създават нови категории"
+    cors_origins: "Позволени източници за cross-origin requests (CORS). Всеки източник трябва да включва http:// или https://. \nПроменливата за DISCOURSE_ENABLE_CORS env трябва да бъде правилно настроена за да позволи CORS."
+    top_menu: "Определете кои елементи да се показват в навигацията на началната страница, и в какъв ред. Например последни|нови|непрочетени|категории|топ|прочетени|публикувани|отметки"
+    post_menu: "Определете кои елементи да се появяват в менюто на публикацията, и в какъв ред. Например like|edit|flag|delete|share|bookmark|reply"
+    post_menu_hidden_items: "Меню елементите над публикацията, които трябва да се скриват и появяват при натискане на бутона с многоточието."
+    share_links: "Определете кои елементи да се появяват в споделен диалог и в какъв ред. "
+    track_external_right_clicks: "Абонирането за външни връзки с кликане на десен бутон (например: отвори в нов прозорец) е изключено по подразбиране, защото пренаписва URL-тата"
+    site_contact_username: "Валидно потребителско име на член на персонала, от което да бъдат изпращани всички автоматизирани съобщения. Ако оставите полето празно, ще бъде използван Системен акаунт по подразбиране. "
+    send_welcome_message: "Изпрати на всички нови потребители лично приветствие и кратко ръководство за форума."
+    suppress_reply_directly_below: "Не показвай брояча на отговорите когато има само един отговор точно под тази публикация."
+    suppress_reply_directly_above: "Не показвай разширяемо \"в отговор до\" на публикация когато има само един отговор директно над нея."
+    suppress_reply_when_quoting: "Не показвай в разширен вид отговора на публикацията, когато публикацията е цитирана в отговора."
+    max_reply_history: "Максимален брой отговори за подробно представяне  при подробно представяне в отговора"
+    experimental_reply_expansion: "Скрий междинните отговори при подробно представяне в отговора (експериментално)"
+    topics_per_period_in_top_summary: "Брой на най-добрите теми, показвани по подразбиране в резюмето с най-добрите теми."
+    topics_per_period_in_top_page: "Брой на най-добрите видими теми в показваните подробно \"Покажи повече\" топ теми."
+    redirect_users_to_top_page: "Автоматично пренасочване на нови и дълго отсъстващи потребители към началната страница."
+    show_email_on_profile: "Покажи имейлите на потребителите на техните профили (видими само за тях и за персонала) "
+    email_token_valid_hours: "Забравена парола / символите за активиране на акаунта са валидни (n) часа."
+    email_token_grace_period_hours: "Забравена парола / символите за активиране на акаунта са  все още валидни за гратисен период от (n) часа  след като са поправени."
+    enable_badges: "Активирай системата за значки"
+    allow_index_in_robots_txt: "Посочете в robots.txt, че е позволено този сайт  да бъде индексиран от търсачките."
+    email_domains_blacklist: "Списък от имейл домейни, които са забранени за регистрация. Пример: mailinator.com, trashmail.net"
+    email_domains_whitelist: "Списък от имейл домейни, на които е ПОЗВОЛЕНО да се регистрират потребителите. ВНИМАНИЕ: Потребители с имейл домейни различни от тези няма да бъдат допуснати!"
+    forgot_password_strict: "Не информирай потребителите за съществуването на профил когато използват функцията за забравена парола."
+    log_out_strict: "При изход, да се прекратяват ВСИЧКИ сесии на този потребител на всички устройства "
+    version_checks: "Следи Discourse Hub за актуализации и показвай съобщение за нова версия на /admin таблото."
+    new_version_emails: "Изпратете имейл до contact_email адрес когато има нова версия на Discourse."
+    port: "САМО ЗА РАЗРАБОТЧИЦИ! ПРЕДУПРЕЖДЕНИЕ! Използвате различен порт от този по подразбиране - 80-ти. Оставете празно, за да се използва 80-ти порт."
+    force_hostname: "САМО ЗА РАЗРАБОТЧИЦИ! ПРЕДУПРЕЖДЕНИЕ! Посочете име на хост в URL адреса. Оставете празно за по подразбиране."
+    invite_expiry_days: "Колко дълго са валидни ключовете за покана, в дни"
+    invite_passthrough_hours: "Колко време е активен ключа за покана, след като вече е бил използван, в часове"
+    invite_only: "Публичната регистрация е забранена, всички нови потребители трябва да бъдат изрично поканени от други членове или служители."
+    login_required: "Изисква разпознаване за прочит на съдържанието на сайта, не е разрешен анонимен достъп."
+    min_username_length: "Минимална дължина на потребителските имена в символи. ПРЕДУПРЕЖДЕНИЕ: ВСИЧКИ СЪЩЕСТВУВАЩИ ПОТРЕБИТЕЛИ С ИМЕНА ПО-КРАТКИ ОТ ЗАДАДЕНОТО НЯМА ДА МОЖЕ ДА ВЛИЗАТ В САЙТА."
+    max_username_length: "Максимална дължина на потребителското име в символи. ПРЕДУПРЕЖДЕНИЕ: ВСИЧКИ ПОТРЕБИТЕЛИ С ПО–ДЪЛГИ ПОТРЕБИТЕЛСКИ ИМЕНА ОТ ЗАДАДЕНОТО НЯМА ДА МОЖЕ ДА ВЛИЗАТ В САЙТА."
+    min_password_length: "Минимална дължина на парола."
+    block_common_passwords: "Не са разрешени паролите, които са в топ 10,000 от най-често използваните."
+    enable_sso: "Активирай SSO чрез външен сайт ( ПРЕДУПРЕЖДЕНИЕ: може да предотврати влизането на всеки, включително Вас, ако не е правилно конфигурирано; също така забранява покани)"
+    enable_sso_provider: "Имплементиране на Discourse SSO протокол в /session/sso_provider крайна точка, изисква sso_secret да бъде настроен"
+    sso_url: "URL точки SSO "
+    sso_secret: "Таен стринг използван за криптографско удостоверяване на SSO  информацията, уверете се, че е минимум 10 символа"
+    sso_overrides_email: "Заместване на местните имейли с други от външен сайт  от SSO payload (ВНИМАНИЕ: могат да настъпят несъответствия поради нормализирането на местните имейли)"
+    sso_overrides_username: "Заместване на местните потребителски имена с други от външен сайт от SSO payload (ВНИМАНИЕ: могат да настъпят несъответствия поради разликата в дължината/изискванията на потребителските имена)"
+    sso_overrides_name: "Заместване на местното име с друго от външен сайт от SSO payload (ВНИМАНИЕ: могат да настъпят несъответствия поради нормализирането на местните имена)"
+    sso_overrides_avatar: "Заместване на потребителския аватар с друг от външен сайт от SSO payload. Ако е разрешено деактивирането на allow_uploaded_avatars е препоръчително"
+    enable_local_logins: "Разрешаване на акаунти базирани на локални потребителски имена и пароли. (Забележка: Това трябва да бъде разрешено за поканите за да работи)"
+    allow_new_registrations: "Позволи регистрация на нови потребители. Махни отметката, за да не може никой да създаде нов акаунт."
+    enable_google_logins: "(отхвърлен) Активиране на Google удостоверяване. Това е OpenID метод за удостоверяване, който Google отхвърли. Новите инсталации няма да работят с него. Вместо него използвай Google Oauth2. Съществуващите инсталации трябва да бъдат преместени в Google Oauth2 преди 20 април 2015г."
+    enable_yahoo_logins: "Активиране на Yahoo удостоверяване"
+    enable_google_oauth2_logins: "Активиране на Google Oauth2 удостоверяване. Това е начина на удостоверяване, който се поддържа от Google в момента. Изисква key и secret."
+    google_oauth2_client_id: "Client ID за Google приложение."
+    google_oauth2_client_secret: "Client secret за Google приложение."
+    enable_twitter_logins: "Активиране на Twitter удостоверяване, изисква  twitter_consumer_key и twitter_consumer_secret"
+    twitter_consumer_key: "Потребителски ключ за Twitter удостоверяване, зарегистриран на  http://dev.twitter.com"
+    twitter_consumer_secret: "Потребителска тайна за Twitter удостоверяване, регистриран в http://dev.twitter.com"
+    enable_facebook_logins: "Активиране на Facebook удостоверяване изисква facebook_app_id и facebook_app_secret "
+    facebook_app_id: "App id за Facebook удостоверяване, регистрирано на https://developers.facebook.com/apps"
+    facebook_app_secret: "App secret за Facebook удостоверяване, регистрирано на https://developers.facebook.com/apps"
+    enable_github_logins: "Разрешете Github удостоверяване, изисква github_client_id и github_client_secret"
+    github_client_id: "Client id за Github удостоверяване, регистрирано на https://github.com/settings/applications"
+    github_client_secret: "Client secret за Github удостоверяване, регистриран на https://github.com/settings/applications"
+    allow_restore: "Позволи възстановяване, което може да замени ВСИЧКИ данни на сайта! Оставете го погрешно освен ако не планирате да възстановите бекъпа"
+    maximum_backups: "Максимално количество бекъпи, които могат да бъдат съхранени на диска. По-старите бекъпи са автоматично изтрити"
+    backup_daily: "Автоматично създавай бекъп на сайта веднъж на ден."
+    enable_s3_backups: "Качи бекъпи на S3 когато е пълен. ВАЖНО: изисква валидни S3 правомощия въведени в настройките на файловете."
+    s3_backup_bucket: "Remote bucket за съхранение на бекъпи. ВНИМАНИЕ: Бъдете сигурни, че това е remote bucket."
+    active_user_rate_limit_secs: "Колко често обновяваме полето the 'last_seen_at', в секунди "
+    verbose_localization: "Покажи разширени локализационни съвети в потребителския интерфейс "
+    previous_visit_timeout_hours: "Колко дълго трябва да продължи посещението на сайта, за да се счита за \"предишно\" посещение, в часове"
+    rate_limit_create_topic: "След създаването на тема, потребителите трябва да изчакат (n) секунди преди да създадат друга тема."
+    rate_limit_create_post: "След публикуване, потребителите трябва да изчакат (n) секунди преди да направят друга публикация."
+    rate_limit_new_user_create_topic: "След създаването на тема, новите потребители трябва да изчакат (n) секунди преди да създадат друга тема."
+    rate_limit_new_user_create_post: "След публикуване, новите потребители трябва да изчакат (n) секунди преди да направят друга публикация."
+    max_likes_per_day: "Максимален брой харесвания на потребител на ден."
+    max_flags_per_day: "Максимален брой сигнали на потребител на ден."
+    max_bookmarks_per_day: "Максимален брой отметки на потребител на ден."
+    max_edits_per_day: "Максимален брой редактирания на потребител на ден."
+    max_topics_per_day: "Максимален брой теми, които потребител може да създаде на ден."
+    max_private_messages_per_day: "Максимален брой лични съобщения, които потребител може да изпрати на ден."
+    max_invites_per_day: "Максимален брой покани на потребител за ден."
+    suggested_topics: "Брой на предложените теми, показани в долната част на една тема."
+    limit_suggested_to_category: " В списъка с предложените теми покажи теми, само от текущата категория."
+    clean_up_uploads: "Прамахни грубите непубликувани качени файлове, за да бъде предотвратен незаконен хостинг. ВАЖНО: може би искате да направите резервно копие на тази директория преди да разрешите тази настройка."
+    clean_orphan_uploads_grace_period_hours: "Гратисен период (в часове) преди непубликуваните прикачени файлове да бъдат премахнати."
+    purge_deleted_uploads_grace_period_days: "Гратисен период (в дни) преди изтритите качвания да бъдат заличени."
+    purge_unactivated_users_grace_period_days: "Гратисен период ( в дни) преди да бъдат изтрити потребителите, които не са активирали своите акаунти."
+    enable_s3_uploads: "Постави качените файлове на Amazon S3 storage. ВАЖНО: изисква валидни S3 идентификационни данни (both access key id & secret access key)."
+    s3_use_iam_profile: 'Използвайте AWS EC2 IAM за получаване на ключове. ЗАБЕЛЕЖКА: разрешаването ще презапише "s3 access key id" и "s3 secret access key" настройката.'
+    s3_upload_bucket: "Име на Amazon S3 bucket в което ще се качват файловете. ВНИМАНИЕ: трябва да съдържа само малки букви, без разстояния и долни черти."
+    s3_access_key_id: "Amazon S3 secret access key който ще се използва за качването на изображения."
+    s3_secret_access_key: "Amazon S3 secret access key който ще се използва за качването на изображения."
+    s3_region: "The Amazon S3 region name който ще се използва за качването на изображения."
+    enable_flash_video_onebox: "Разрешаване на ембедване на swf и flv (Adobe Flash) линкове в oneboxes. ВНИМАНИЕ: това може да създаде проблеми със сигурността."
+    default_invitee_trust_level: "По подразбиране ниво на доверие (0-4) за невалидни потребители."
+    default_trust_level: "По подразбиране ниво на доверие (0-4) за всички нови потребители."
+    tl1_requires_topics_entered: "Колко теми трябва да отвори нов потребител, за да премине към ниво на доверие 1."
+    tl1_requires_read_posts: "Колко публикации трябва да прочете нов потребител, за да премине към ниво на доверие 1."
+    tl1_requires_time_spent_mins: "Колко минути трябва да чете публикации нов потребител, за да премине към ниво на доверие 1."
+    tl2_requires_topics_entered: "Колко теми трябва да отвори нов потребител, за да премине към ниво на доверие 2."
+    tl2_requires_read_posts: "Колко публикации трябва да прочете нов потребител, за да премине към ниво на доверие 2."
+    tl2_requires_time_spent_mins: "Колко минути трябва да чете публикации нов потребител, за да премине към ниво на доверие 2."
+    tl2_requires_days_visited: "Колко дни трябва потребителя да посещава сайта, за да премине към ниво на доверие 2."
+    tl2_requires_likes_received: "Колко харесвания трябва да има потребител, за да премине към ниво на доверие 2."
+    tl2_requires_likes_given: "Колко харесвания трябва да направи потребител, за да премине към ниво на доверие 2."
+    tl2_requires_topic_reply_count: "На колко теми трябва да отговори потребител, за да премине към ниво на доверие 2."
+    tl3_requires_days_visited: "Минимален брой дни, през които потребителят трябва да е посещавал сайта през последните 100 дни, за да премине към ниво на доверие 3. (0 до 100)"
+    tl3_requires_topics_replied_to: "Минимален брой теми, на които потребителят трябва да е отговорил през последните 100 дни, за да премине към ниво на доверие 3. (0 или повече)"
+    tl3_requires_topics_viewed: "Процентът теми, създадени през последните 100 дни, които потребителят трябва да прегледа, за да се класира за повишаване в ниво на доверие 3. ( от 0 до 100)"
+    tl3_requires_posts_read: "Процентът публикации, създадени през последните 100 дни, които потребителят трябва да прегледа, за да се класира за повишаване в ниво на доверие 3. ( от 0 до 100)"
+    tl3_requires_topics_viewed_all_time: "Общ минимален брой теми, които потребителят трябва да прегледа, за да се класира за ниво на доверие 3."
+    tl3_requires_posts_read_all_time: "Общ минимален брой публикации, които потребителят трябва да прочете, за да се класира за ниво на доверие 3."
+    tl3_requires_max_flagged: "Потребителят не трябва да има повече от x публикации, за които е сигнализирано от x различни потребители през последните 100 дни, за да се класира за повишаване в ниво на доверие 3, където x е стойността на тази настройка. (0 или по-висока)"
+    tl3_promotion_min_duration: "Минимален брой дни, през които трае повишението на ниво на доверие 3 преди потребителят да бъде понижен обратно на ниво на доверие 2."
+    tl3_requires_likes_given: "Минимален брой харесвания, които трябва да бъдат дадени през последните 100 дни за повишаване на ниво на доверие 3."
+    tl3_requires_likes_received: "Минимален брой харесвания, които трябва да бъдат получени през последните 100 дни за повишаване на ниво на доверие 3."
+    tl3_links_no_follow: "Не премахвайте  rel=nofollow от линковете, публикувани от потребители с ниво на доверие 3."
+    min_trust_to_create_topic: "Минимално ниво на доверие изисквано за създаване на нова тема"
+    min_trust_to_edit_wiki_post: "Минимално ниво на доверие изисквано за редактиране на wiki."
+    newuser_max_links: "Колко линка може да добави в публикация нов потребител."
+    newuser_max_images: "Колко изображения може да добави нов потребител в публикацията си."
+    newuser_max_attachments: "Колко прикачени файла може да добави нов потребител в публикацията си."
+    newuser_max_mentions_per_post: "Максимален брой споменавания на други потребители @name, които нов потребител може да направи."
+    newuser_max_replies_per_topic: "Максимален брой отговори, които нов потребител може да направи докато някой друг не отговори."
+    max_mentions_per_post: "Максимален брой споменавания на @name, които един потребител може да направи."
+    create_thumbnails: "Създадените миниатюри и Lightbox изображения са прекалено големи, за да се поберат в една публикация."
+    email_time_window_mins: "Изчакайте (n) минути преди да изпратите уведомителни имейли, за да дадете шанс на потребителите да редактират и финализират своите публикации."
+    email_posts_context: "Колко предишни отговори да бъдат включени като контекст в уведомителните имейли."
+    flush_timings_secs: "Колко често данните за време се записват на сървъра, в секунди"
+    max_word_length: "Максимално допустима дължина на думата в заглавието на темата."
+    title_min_entropy: "Минимална ентропия ( уникални символи, тези които не са английски  се броят за повече) изисквана за заглавието на темата."
+    body_min_entropy: "Минимална ентропия ( уникални символи, тези които не са английски  се броят за повече) изисквана за текста на публикацията."
+    title_fancy_entities: "Конвертирайте обикновените ASCII символи в луксозните HTML символи в заглавията на темите, ala SmartyPants http://daringfireball.net/projects/smartypants/"
+    min_title_similar_length: "Минимална дължина на заглавието на темата, като тя ще бъде проверена за наличие на подобна."
+    min_body_similar_length: "Минимална дължина на съдържанието на публикацията, при което то ще бъде проверено за наличие на подобно."
+    category_colors: "Списък от шестнадесетични цветови стойности разрешени за категориите."
+    category_style: "Визуален стил за категорията със значки."
+    max_image_size_kb: "Максимален размер за качване на избражение в kB. Това също трябва да се конфигурира в nginx конфигурацията (client_max_body_size), apache или прокси сървъра."
+    max_attachment_size_kb: "Максимална големина на прикачените файлове в kB. Това също трябва да се конфигурира в nginx (client_max_body_size), apache или прокси сървъра."
+    authorized_extensions: "Списък от разширения на файлове разрешени за качване (използвайте '*' за да разрешите всички)"
+    max_similar_results: "Брой подобни теми показвани на потребителя при създаването на нова тема. Сравнението е базирано на заглавието и текста на темата."
+    title_prettify: "Предотврати разпространението на печатни грешки, грешки включващи главни букви, малки букви, излишни ! и ? в края на изречението и т.н."
+    topic_views_heat_low: "След толкова много прегледи, полето на прегледаните ще бъде леко подчертано."
+    topic_views_heat_medium: "След толкова много прегледи, полето на прегледаните ще бъде умерено подчертано."
+    topic_views_heat_high: "След толкова много прегледи, полето на прегледаните ще бъде силно подчертано."
+    cold_age_days_low: "След толкова много дни на разговори, последната дата с активност ще бъде леко подчертана."
+    cold_age_days_medium: "След толкова много дни на разговори, последната дата с активност ще бъде умерена подчертана."
+    cold_age_days_high: "След толкова много дни на разговори, последната дата с активност ще бъде силно подчертана."
+    history_hours_low: "Публикация, редактирана в рамките на толкова много часове, ще бъде индикирана като леко подчертана"
+    history_hours_medium: "Публикация, редактирана в рамките на толкова много часове, ще бъде индикирана като умерено подчертана."
+    history_hours_high: "Публикация, редактирана в рамките на толкова много часове, ще бъде индикирана като силно подчертана"
+    topic_post_like_heat_low: "След харесване: ако съотношението на публикации надхвърля това съотношение, полето с броя на публикациите ще е леко подчертано. "
+    topic_post_like_heat_medium: "След харесване: ако съотношението на публикациите надхвърля това съотношение, полето с броя на публикации ще е умерено подчертано."
+    topic_post_like_heat_high: "След харесване:ако съотношението на публикациите надхвърля това съотношение, полето с броя на публикациите ще е силно подчертано."
+    faq_url: "Въведете пълен URL към страницата FAQ, ако искате да използвате собствена версия."
+    tos_url: "Ако имате документ с \"Правила за ползване\" който се хоства някъде другаде и желаете да го използвате, въведете пълния път до URL адреса тук. "
+    privacy_policy_url: "Ако имате документ \"Декларация за поверителност\", който се хоства някъде другаде и желаете да го използвате, въведете пълния път до URL адреса тук. "
+    newuser_spam_host_threshold: "Колко пъти нов потребител може да поства линкове на един и същи хост `newuser_spam_host_posts` преди да бъде отчетено като спам."
+    white_listed_spam_host_domains: "Списък с домейните изключени от спам хост теста. Новите потребители никога няма да бъдат ограничавани в създаването на публикации с линкове към тези домейни."
+    staff_like_weight: "Колко допълнителна тежест да се дава за харесвания от екипа."
+    topic_view_duration_hours: "Отчитане на нов преглед на темата веднъж за IP/потребител на N часа"
+    levenshtein_distance_spammer_emails: "Колко символа разлика в съвпадението може да има, когато се проверява имейла за спам, за да има приблизително съвпадение."
+    max_new_accounts_per_registration_ip: "Ако вече има (n) в ниво на доверие 0 акаунта от това IP (и никой не е от екипа или от по-високо ниво на доверие 2), спри да приемаш нови регистрации от този IP адрес."
+    min_ban_entries_for_roll_up: "Когато щракнете на бутона Сливане, ще създадете нов бан на подмрежа, ако в същата има повече от (N)   записа."
+    max_age_unmatched_emails: "Изтриване на несъвпадащите пресяти имейл записи след (N) дни."
+    max_age_unmatched_ips: "Изтрий  несъчетаните пресяти IP вписвания след (N) дни."
+    num_flaggers_to_close_topic: "Минимален брой уникални сигнализации, които се изискват за спиране на темата"
+    num_flags_to_close_topic: "Минимален брой активни сигнали, които се изискват за спиране на темата"
+    reply_by_email_enabled: "Позволи отговори в темите чрез имейл."
+    reply_by_email_address: "Шаблон за отговор по имейла на входящ имейл адрес, например: %{reply_key}@reply.example.com or replies+%{reply_key}@example.com"
+    disable_emails: "Забрани Discoursе да изпраща каквито и да е имейли "
+    strip_images_from_short_emails: "Премахни от имейлите по-малките от 2800 байта изображения"
+    short_email_length: "Колко байта имейл се счита за кратък"
+    pop3_polling_enabled: "Проверка чрез POP3 за имейл отговорите."
+    pop3_polling_ssl: "Използвай SSL при свързване със сървъра POP3. (Препоръчително)  "
+    pop3_polling_period_mins: "Срок в минути за проверката на POP3 акаунта за имейл. ЗАБЕЛЕЖКА: изисква рестарт."
+    pop3_polling_port: "Порт за проверка на POP3 акаунт."
+    pop3_polling_host: "Хост за проверка на имейла чрез POP3."
+    pop3_polling_username: "Потребителско име за POP3 акаунт за проверка на имейла."
+    pop3_polling_password: "Парола за POP3 акаунт за проверка на имейла. "
+    email_in: "Позволи на потребителите да публикуват нови теми чрез имейл (задължително pop3). Конфигурирай адресите в \"Настроки\" за всяка категория."
+    email_in_min_trust: "Минимално ниво на доверие, което потребителя трябва да притежава, за да публикува нови теми чрез имейл."
+    email_prefix: " [label] се използва като тема на имейлите. Ако не бъде определено, ще бъде използвано \"заглавие\" по подразбиране."
+    email_site_title: "Заглавието на сайта се използва като подател на имейлите от сайта. Ако не бъде определено, ще бъде използвано \"заглавие\" по подразбиране. Ако вашето \"заглавие\" съдържа символи, които не са позволени, използвайте тази настройка."
+    minimum_topics_similar: "Колко теми трябва да съществуват преди да бъдат представени подобни теми при създаването на нови."
+    relative_date_duration: "Брой дни след публикацията, през които датата на публикуването ще бъде показвана като относителна ( 7д) вместо абсолютна ( 20 Фев.)."
+    delete_user_max_post_age: "Забрани изтриване на потребители, чиято първа публикация е по-стара от (x) дни."
+    delete_all_posts_max: "Максимален брой публикации, които могат да бъдат изтрити наведнъж с бутона за изтриване на всички публикации. Ако потребителят има по-голям брой публикации от този, то те не могат да бъдат изтрити наведнъж, следователно и потребителя не може да бъде изтрит."
+    username_change_period: "Брой дни след регистрация, през които потребителите могат да променят своите потребителски имена ( 0 за забрана на промяната)."
+    email_editable: "Разреши на потребителите да променят техния имейл адрес след регистрация."
+    logout_redirect: "Място, на което браузърът да пренасочва след излизане, Например: (http://somesite.com/logout)"
+    allow_uploaded_avatars: "Разрешете на потребителите да качват свои аватари."
+    allow_animated_avatars: "Позволи на потребителите да използват анимирани GIF аватари. ВАЖНО: зареждане на аватарите: презареди рейк задачата след промяната на тази настройка."
+    allow_animated_thumbnails: "Създай анимирани миниатюри на анимираните GIF изображения."
+    default_avatars: "URL за аватари, които ще бъдат използвани по подразбиране за нови потребители, преди те да ги променят"
+    automatically_download_gravatars: "Свали Gravatar за потребителите преди създаването на профил или промяна на имейла."
+    digest_topics: "Максимален брой теми показвани в имейла с новостите."
+    digest_min_excerpt_length: "Минимум дължина на откъса в имейл дайджеста, в символи."
+    default_digest_email_frequency: "Колко често потребителите да получават имейл с новости по подразбиране. Те могат да променят тези настройки от техните предпочитания."
+    suppress_digest_email_after_days: "Забрани дайджест имейлите за потребители, които не са влизали на сайта повече от (n) дни."
+    disable_digest_emails: "Деактивирай дайджест имейлите за всички потребители."
+    default_external_links_in_new_tab: "Отвори външните връзки в нов прозорец. Потребителите могат да променят това в техните предпочитания."
+    detect_custom_avatars: "Провери/Не проверявай дали потребителите са  си сложили аватари."
+    max_daily_gravatar_crawls: "Максимален брой сваляния на аватари с Gravatar за ден"
+    public_user_custom_fields: "Списък с позволени допълнителни полета за потребителите, които могат да бъдат показани публично."
+    staff_user_custom_fields: "Списък с позволени допълнителни полета за потребителите, които могат да бъдат показани на членове на екипа."
+    allow_profile_backgrounds: "Позволи на потребителите да качват фонове на профилите си."
+    sequential_replies_threshold: "Брой възможни подред направени публикации, преди да се покаже предупреждение за твърде чести отговори."
+    enable_mobile_theme: "Мобилните устройства използват адаптирана тема с възможност за преминаване към нормален изглед. Забранете тази настройка, ако искате да използвате свой собствен стил за мобилните устройства."
+    dominating_topic_minimum_percent: "Какъв процент публикации може да направи един потребител преди да бъде предупреден за доминиране в тема."
+    suppress_uncategorized_badge: "Не показвай значката в списъците с теми за тези, които не  са категоризирани. "
+    global_notice: "Покажи МНОГО ВАЖНО, СПЕШНО съобщение на всички посетители. Премахване на съдържанието, за да бъде скрито ( HTML позволено)."
+    disable_edit_notifications: "Забрани редактирането на уведомления от системните потребители когато 'download_remote_images_to_local'  е активно."
+    enable_names: "Покажи пълното име на потребителите на техните профили, потребителски карти, и имейли. Деактивирай за скриване на пълното име навсякъде."
+    display_name_on_posts: "Покажи пълните имена на потребителите в техните публикации като допълнение към потребителските им имена @username."
+    invites_per_page: "Видими по подразбиране покани на страницата на потребителя. "
+    short_progress_text_threshold: "След достигането на определен брой публикации в темата, в лентата за напредъка ще бъде видим само броят на текущите публикации. Ако промените ширината на лентата за напредъка, може да се наложи да промените тази стойност. "
+    default_code_lang: "Подчертаване на  езиковия синтаксис по подразбиране  е приложен за GitHub code blocks (lang-auto, ruby, python etc.) "
+    warn_reviving_old_topic_age: "Когато някой започне да пише в тема, където последният отговор е от преди много време, ще се покаже предупреждение. Изключи с 0. "
+    autohighlight_all_code: "Оцветявай всички предварително форматирани кодови блокове, дори когато няма изрично посочен език."
+    embeddable_host: "Хост, на който е позволено поставянето на коментари от този форум."
+    feed_polling_enabled: "САМО ЗА ВГРАЖДАНЕ: Дали да вградите RSS/ATOM feed като публикации."
+    feed_polling_url: "САМО ЗА ВГРАЖДАНЕ: URL на RSS/ATOM feed да се вгради."
+    embed_by_username: "Докладвай потребителското име на потребител, който създава теми за вграждане.  "
+    embed_username_key_from_feed: "Ключ за дърпане на discourse потребителско име от feed."
+    embed_truncate: "Премахване на вградените публикации."
+    embed_category: "Категория от теми за вграждане."
+    embed_post_limit: "Максимален брой публикации за вграждане."
+    embed_whitelist_selector: "CSS селектор за елементи, които са позволени за вграждане."
+    embed_blacklist_selector: "CSS селектор за елементи, които не са позволени за вграждане."
+    notify_about_flags_after: "Ако все още има сигнали, които не са взети под внимание, след толкова много часове, прати имейл до contact_email. 0 за деактивация"
+    enable_cdn_js_debugging: "Разреши /logs да показва подходящи грешки чрез добавяне на crossorigin правила във всички js инклуди."
+    show_create_topics_notice: "Ако на сайта има по-малко от 5 теми, покажи на персонала съобщение с молба за създаване на още теми."
+    vacuum_db_days: "Пуснете VACUUM FULL ANALYZE ,за да възстановите свободно място от базата след мигриране (въведете 0 за да го забраните)"
+    prevent_anons_from_downloading_files: "Предотврати свалянето на приложения от анонимни потребители. ВНИМАНИЕ: това ще  попречи на работата на всички авоари ,които са публикувани на сайта като  приложения без изображения. "
+    enable_emoji: "Разреши емотикони"
+    emoji_set: "Как бихте искали да е вашата емотикона?"
+    enforce_square_emoji: "Направи квадратни всички емотикони."
+    errors:
+      invalid_email: "Невалиден имейл адрес."
+      invalid_username: "Няма потребител с такова потребителско име."
+      invalid_integer_min_max: "Стойността трябва да мъде между  %{min} и %{max}."
+      invalid_integer_min: "Стойността трябва да бъде %{min} или по-голяма"
+      invalid_integer_max: "Стойността не може да бъде по-голяма от %{max}."
+      invalid_integer: "Стойността трябва да бъде число."
+      regex_mismatch: "Стойноста не съвпада с необходимия формат."
+      must_include_latest: "Заглавното меню трябва да включва таб-а \"последни\"."
+      invalid_string: "Невалидна стойност."
+      invalid_string_min_max: "Трябва да бъде между  %{min} и %{max} символа."
+      invalid_string_min: "Трябва да бъде минимум %{min} символа."
+      invalid_string_max: "Трябва да не бъде с повече от %{max} символа."
+      invalid_reply_by_email_address: "Стойността трябва да съдържа '%{reply_key}' и да бъде различна от известяващия имейл."
+  notification_types:
+    mentioned: "%{display_username} ви спомена в %{link}"
+    liked: "%{display_username} хареса вашата публикация в %{link}"
+    replied: "%{display_username} отговори на вашата публикация в %{link}"
+    quoted: "%{display_username} цитира вашата публикация в %{link}"
+    edited: "%{display_username} редактира вашата публикация в %{link}"
+    posted: "%{display_username} публикува в %{link}"
+    moved_post: "%{display_username} премести вашата публикация в %{link}"
+    private_message: "%{display_username} Ви изпрати лично съобщение: %{link}"
+    invited_to_private_message: "%{display_username} Ви покани в лично съобщение: %{link}"
+    invitee_accepted: "%{display_username} прие вашата покана"
+    linked: "%{display_username} Ви хареса в %{link}"
+    granted_badge: "Вие спечелихте %{link}"
+  search:
+    within_post: "#%{post_number} от %{username}"
+    types:
+      category: 'Категории'
+      topic: 'Резултати'
+      user: 'Потребители'
+  sso:
+    not_found: "Не може да се намери или създаде акаунт, свържете се с администратор."
+    account_not_approved: "Акаунта изчаква одобрение, Вие ще получите имейл когато това стане."
+    unknown_error: "Грешка при обновяване на информацията, свържете се с администратор."
+    timeout_expired: "Времето за вход изтече, моля опитайте да влезете отново."
+  original_poster: "Автор"
+  most_posts: "Повечето мнения"
+  most_recent_poster: "Последен Автор"
+  frequent_poster: "Частен Автор"
+  redirected_to_top_reasons:
+    new_user: "Добре дошли в нашата общност! Това са най-популярните последни теми. "
+    not_seen_in_a_month: "Добре дошли отново! Това са най-популярните теми за времето, през което Ви нямаше."
+  move_posts:
+    new_topic_moderator_post:
+      one: "Преместих публикацията в нова тема: %{topic_link}"
+      other: "Преместих %{count} публикации в нова тема: %{topic_link}"
+    existing_topic_moderator_post:
+      one: "Преместих публикацията в съществуващата тема: %{topic_link}"
+      other: "Преместих %{count} публикации в съществуващата тема: %{topic_link}"
+  change_owner:
+    post_revision_text: "Собствеността е прехвърлена от %{old_user} към %{new_user}"
+  emoji:
+    errors:
+      name_already_exists: "Съжаляваме, името '%{name}' вече се използва от друга емотикона."
+      error_while_storing_emoji: "Съжаляваме, появи се грешка по време на запазването на емотиконата."
+  topic_statuses:
+    archived_enabled: "Тази тема в момента е в архив. Тя е замразена и не може да се променя по никакъв начин."
+    archived_disabled: "Тази тема е разархивирана. Вече не е замразена и може да се променя."
+    closed_enabled: "Тази тема е затворена. Вече не е разрешено да се отговаря в нея."
+    closed_disabled: "Тази тема сега е отворена. Новите отговори са разрешени."
+    autoclosed_enabled_days:
+      one: "Тази тема ще се затвори автоматично след 1 ден. Нови отговори вече не се допускат."
+      other: "Тази тема ще се затвори автоматично след %{count} дни. Нови отговори вече не се допускат."
+    autoclosed_enabled_hours:
+      one: "Тази тема ще се затвори автоматично след 1 час. Нови отговори не се допускат."
+      other: "Тази тема ще се затвори автоматично след %{count} часа. Нови отговори не се допускат."
+    autoclosed_enabled_minutes:
+      one: "Тази тема ще се затвори автоматично след 1 минута. Нови отговори не се допускат."
+      other: "Тази тема ще се затвори автоматично след %{count} минути. Нови отговори не се допускат."
+    autoclosed_enabled_lastpost_days:
+      one: "Тази тема беше автоматично затворена 1 ден след последния отговор. Нови отговори вече не са разрешени."
+      other: "Тази тема беше автоматично затворена след %{count} дни след последния отговор. Нови отговори вече не са разрешени."
+    autoclosed_enabled_lastpost_hours:
+      one: "Тази тема беше автоматично затворена 1 час след последния отговор. Отговорите в нея вече са забранени."
+      other: "Тази тема беше автоматично затворена %{count} часа след последния отговор. Отговорите в нея вече са забранени. "
+    autoclosed_enabled_lastpost_minutes:
+      one: "Тази тема беше автоматично затворена 1 минута след последния отговор. Отговорите в нея вече са забранени. "
+      other: "Тази тема беше автоматично затворена %{count} минути след последния отговор. Отговорите в нея вече са забранени. "
+    autoclosed_disabled: "Тази тема сега е отворена. Новите отговори са разрешени."
+    autoclosed_disabled_lastpost: "Тази тема сега е отворена. Новите отговори са разрешени."
+    pinned_enabled: "Тази тема сега е закована. Тя ще се появява най-отгоре на категорията си и на всички списъци с теми, докато не бъде откована от член на персонала или индивидуално от потребителите."
+    pinned_disabled: "Тази тема вече не е закована. Повече няма да се появява най-отгоре на  категорията."
+    pinned_globally_enabled: "Тази тема сега е закована глобално. Тя ще се появява най-отгоре на категорията си и на всички списъци с теми, докато не бъде откована от член на персонала или индивидуално от потребителите."
+    pinned_globally_disabled: "Тази тема вече не е закована. Повече няма да се появява най-отгоре на  категорията."
+    visible_enabled: "Темата е вписана. Тя ще се почви в списъка с темите."
+    visible_disabled: "Тази тема е отписана. Тя вече няма да бъде видима в нито един списък с теми“ Единствения начин за достъп до нея е чрез директен линк."
+  login:
+    not_approved: "Вашият профил все още не е одобрен. Ще бъдете уведомени с имейл когато е възможно влизането Ви. "
+    incorrect_username_email_or_password: "Грешно потребителско име, имейл или парола."
+    wait_approval: "Благодарим Ви за регистрацията. Ще Ви уведомим когато вашият профил е одобрен."
+    active: "Профилът ви е активиран и готов за употреба."
+    activate_email: "<p>Почти е готово! Ще Ви изпратим имейл за активация на <b>%{email}</b>. Моля, следвайте инструкциите, за да активирате вашия профил.</p><p>Ако имейлът не е пристигнал, проверете спам папката или опитайте да влезете отново за да Ви изпратим друг имейл за активация.</p>"
+    not_activated: "Не можете да влезете все още. Ще ви изпратим имейл за активация. Моля следвайте инструкциите, за да активирате вашия профил."
+    not_allowed_from_ip_address: "Вие не може да влезете като %{username} от този IP адрес."
+    admin_not_allowed_from_ip_address: "Вие не може да влезете като админ от този IP адрес."
+    suspended: "Вие не може да влизате до %{date}."
+    suspended_with_reason: "Вие нямате право да влизате в сайта до %{date}. Причината поради която ви е забранено е: %{reason}"
+    errors: "%{errors}"
+    not_available: "Не е налично. Опитайте %{suggestion}?"
+    something_already_taken: "Нещо се случи, вероятно потребителското име или имейл адреса са вече регистрирани. Опитайте да използвате връзката за забравена парола."
+    omniauth_error: "Съжаляваме, възникна грешка при потвърждението на вашия профил. Може би не сте приели потвърждението?"
+    omniauth_error_unknown: "Нещо се обърка докато Ви вписваме, моля опитайте отново."
+    new_registrations_disabled: "В момента новите регистации са забранени."
+    password_too_long: "Паролата е ограничена до 200 символа."
+    missing_user_field: "Вие не сте попълнили всички потребителски полета."
+    close_window: "Удостоверяването е готово. Затворете този прозорец, за да продължите."
+  user:
+    no_accounts_associated: "Няма свързани профили"
+    username:
+      short: "трябва да бъде минимум %{min} символа."
+      long: "трябва да не е повече от %{max} символа."
+      characters: "трябва да включва само цифри, букви и долни черти"
+      unique: "Трябва да бъде уникално"
+      blank: "Трябва да присъства"
+      must_begin_with_alphanumeric: "Трябва да започва с буква или цифра"
+    email:
+      not_allowed: "не е разрешено от този имейл доставчик. Моля използвайте друг имейл адрес."
+      blocked: "не е разрешено"
+    ip_address:
+      blocked: "е блокирано"
+  invite_mailer:
+    subject_template: "%{invitee_name} ви покани '%{topic_title}' на %{site_domain_name}"
+    text_body_template: |
+      %{invitee_name} Ви покани на дискусия
+
+      > **%{topic_title}**
+      >
+      > %{topic_excerpt}
+
+      в
+
+      > %{site_title} -- %{site_description}
+
+      Ако се заинтересувани, кликнете на този линк:
+
+      %{invite_link}
+
+      Тази покана е от потребител с ниво на доверие, затова можете да отговорите на дискусията незабавно.
+  invite_forum_mailer:
+    subject_template: "%{invitee_name} ви покани да се присъедините %{site_domain_name}"
+    text_body_template: "%{invitee_name} Ви покани да се присъедините в \n\n> **%{site_title}**\n>\n> %{site_description}\n\nАко сте заинтересувани, кликнете на този линк:\n\n%{invite_link}\n\nТази покана е от потребител с ниво на доверие, затова не е необходимо да се вписвате.\n"
+  invite_password_instructions:
+    subject_template: "Сложете парола за вашият %{site_name} акаунт"
+    text_body_template: |
+      Благодарим Ви, че приехте поканата за %{site_name} - Добре дошли!
+
+      За да влезете отново, кликнете на следния линк за избор на парола:
+      %{base_url}/users/password-reset/%{email_token}
+  test_mailer:
+    subject_template: "[%{site_name}] Имейл доставяне тест"
+    text_body_template: |
+      Това е тест имейл от
+
+      [**%{base_url}**][0]
+
+      Правилното доставяне на имейл не е лесна работа. Ето няколко неща, които първо трябва да проверите:
+
+      - Уверете се, че правилно сте конфигурирали  `уведомителен имейл` от: адрес във вашите настройки. **Домейнът посочен в "от" адреса на имейлите, които изпращате, е домейнът който ще бъде проверен от вашия имейл.**
+
+      -Дали сте наясно как да видите имейла в оригиналния му вид от вашия имейл клиент,  така че да разгледате заглавията на имейлите за важни неща. В Gmail е от опцията "покажи оригинала" в падащото меню в горния десен ъгъл на всеки имейл.
+
+      -**ВАЖНО:** Дали вашият Интернет доставчик е направил reverse DNS запис на вашето IP,  който да сочи към домейна от който изпращате имейли. [Тествайте вашият Reverse PTR запис][2] тук. Ако вашият Интернет доставчик не е въвел правилен reverse DNS запис, ще се отрази много отрицателно на доставянето на имейли.
+
+      - Дали вашият домейн има правилен [SPF запис][8].  [Тествайте вашия SPF запис][1] тук. Имайте в предвид, че TXT е официалния правилен тип запис за SPF.
+
+      -Дали вашият домейн  [DKIM запис][3] е правилен? Това значително ще подобри доставянето на имейли. [Тествайте вашия DKIM запис][7] тук.
+
+      - Ако стартирате свой собствен имейл сървър, уверете се че IP-тат на вашия имейл сървър не са  [в черния списък на някой имейл ][4]. Също така се уверете, че определено изпраща напълно квалифицирано име на хост, което е разрешено в DNS в HELO съобщение. Ако не, това може да доведе до отхвърляне на вашия имейл от много имейл услуги.
+
+      (Лесният начин е да създадете безплатен профил в [Mandrill][md] или [Mailgun][mg] или [Mailjet][mj], които имат свободни и щедри безплатни пощенски планове и би било добре за малките общности. Все пак Вие трябва да създадете SPF и DKIM записи в DNS!)
+
+      Надяваме се, че сте получили този тест имейл!
+
+      Успех,
+
+      Вашите приятели в [Discourse](http://www.discourse.org)
+
+      [0]: %{base_url}
+      [1]: http://www.kitterman.com/spf/validate.html
+      [2]: http://mxtoolbox.com/ReverseLookup.aspx
+      [3]: http://www.dkim.org/
+      [4]: http://whatismyipaddress.com/blacklist-check
+      [5]: %{base_url}/unsubscribe
+      [7]: http://dkimcore.org/tools/dkimrecordcheck.html
+      [8]: http://www.openspf.org/SPF_Record_Syntax
+      [md]: http://mandrill.com
+      [mg]: http://www.mailgun.com/
+      [mj]: http://www.mailjet.com/pricing
+  new_version_mailer:
+    subject_template: "[%{site_name}] Налична актуализация - новата версия на Discourse"
+    text_body_template: "Новата версия на [Discourse](http://www.discourse.org) е налична.\n\nВашата версия: %{installed_version}\nНова версия: **%{new_version}**\n\nМоже би искате: \n\n- Да видите какво ново в [GitHub changelog](https://github.com/discourse/discourse/commits/master).\n\n-Да подобрите като посетите [%{base_url}/admin/upgrade](%{base_url}/admin/upgrade) и натиснете бутона \"Upgrade\".\n\n-Да посетите [meta.discourse.org](http://meta.discourse.org) за повече новини, дискусии и поддръжка на Discourse.\n"
+  new_version_mailer_with_notes:
+    subject_template: "налична е актуализация на  [%{site_name}]  "
+    text_body_template: |+
+      Новата версия на [Discourse](http://www.discourse.org) е налична.
+
+      Вашата версия:%{installed_version}
+      Нова версия: **%{new_version}**
+
+      Може би искате:
+
+      -Да видите какво ново в [GitHub changelog](https://github.com/discourse/discourse/commits/master).
+
+      -Да подобрите като посетите  [%{base_url}/admin/upgrade](%{base_url}/admin/upgrade), и натиснете бутона "Upgrade".
+
+      -Да посетите [meta.discourse.org](http://meta.discourse.org) за повече новини, дискусии и поддръжка на Discourse.
+
+      ###Бележки по изданието
+
+      %{notes}
+
+
+  flags_reminder:
+    flags_were_submitted:
+      one: "Тези сигнали са подадени преди 1 час."
+      other: "Тези сигнали са подадени преди повече от %{count} часа."
+    please_review: "Моля прегледайте ги."
+    post_number: "публикация"
+    how_to_disable: 'Вие може да изключите или промените честотата на това имейл напомняне чрез "notify about flags after" настройката.'
+    subject_template:
+      one: "1 сигнал чакащ за обработка"
+      other: "%{count} сигнала налични за обработка "
+  flag_reasons:
+    off_topic: "За вашата публикация беше сигнализирано като **оф-топик**: общността смята, че не се вписва в темата, впредвид заглавието на темата и първата публикация. "
+    inappropriate: "За вашата публикация беше сигнализирано като **неуместна**: общността счита, че е обидна, оскърбителна или нарушение на  [виж Правилата на Общността](/guidelines)."
+    spam: "За вашата публикация беше сигнализирано като **спам**: общността счита, че е реклама,  че е по скоро с  рекламна цел, отколкото полезна и уместна за темата."
+    notify_moderators: "За вашата публикация беше сигнализирано като **сигнал до модератор**: общността счита, че е необходима лична намеса от член на персонала."
+  flags_dispositions:
+    agreed: "Благодарим Ви за информацията. Съгласни сме, че има проблем и вече го разглеждаме."
+    agreed_and_deleted: "Благодарим Ви, за информацията. Съгласни сме, че има проблем и ще премахнем публикацията."
+    disagreed: "Благодарим Ви за информацията. Вече разглеждаме проблема."
+    deferred: "Благодарим Ви за информацията. Вече разглеждаме проблема. "
+    deferred_and_deleted: "Благодарим,Ви за информацията. Вече премахнахме публикацията."
+  temporarily_closed_due_to_flags: "Тази тема е временно затворена поради голям брой сигнали"
+  system_messages:
+    post_hidden:
+      subject_template: "Публикацията е скрита заради потребителско сигнализиране"
+      text_body_template: |
+        Здравейте,
+
+        Това е автоматично съобщение от %{site_name} за да Ви уведоми, че вашата публикация беше скрита.
+
+        %{base_url}%{url}
+
+        %{flag_reason}
+
+        Много потребители са сигнализирали за тази публикация преди да бъде скрита, затова моля обмислете преразглеждането на вашата публикация, за да не се сигнализира повече за нередност. **Можете да промените вашата публикация след %{edit_delay} минути, и тя автоматично ще бъде показана.** Това ще повиши вашето ниво на доверие.
+
+        Обаче, ако публикацията е скрита от общността за втори път, тя ще остане скрита докато не бъде обработена от персонала - и може да има по-нататъшни действия, включително и възможност за отстраняване на вашия акаунт.
+
+        За допълнителна информация моля посетете [Правилата на Общността](%{base_url}/guidelines).
+    usage_tips:
+      text_body_template: "Това лично съобщение съдържа няколко съвета, за да започнете.\n\n## Продължавайте да превъртате\n\nНе съществува бутон за следваща страница или номера на страниците - за да прочетете повече **просто продължавайте да превъртате надолу!**\n\nКогато има нови публикации те ще се появят автоматично.\n\n## Къде съм аз?\n\n-За да потърсите вашата потребителска страница или менюто, използвайте иконите в горния десен ъгъл  <kbd>☰</kbd>\n\n-Всяко заглавие на тема ще Ви отведе до следващата непрочетена публикация. Използвайте времето на последната активност и номера на публикацията, за да влезете в горната или долната част.\n\n-Докато четете темата отидете на-отгоре &uarr; като изберете заглавието на темата. Изберете зелената лента за напредъка в долния десен ъгъл за пълен навигационен контрол, или използвайте  <kbd>home</kbd> и <kbd>end</kbd> keys.\n\n<img src=\"/images/welcome/progress-bar.png\" width=\"143\" height=\"39\">\n\n## Как да отговоря?\n\n-За да отговорите като цяло на темата, използвайте бутона за отговор <img src=\"/images/welcome/reply-topic.png\" width=\"29\" height=\"25\"> в най-долната част на страницата.\n\n-За да отговорите на определена публикация, използвайте бутона за отговор <img src=\"/images/welcome/reply-post.png\" width=\"29\" height=\"25\"> в тази публикация.\n\n-За да отведете разговора в друга насока, но все пак в същата връзка, използвайте  <img src=\"/images/welcome/reply-as-linked-topic.png\" width=\"15\" height=\"25\"> \n\nЗа да цитирате някого във вашия отговор, изберете текста, който искате да цитирате, а след това натиснете бутон за отговор.\n\n<img src=\"/images/welcome/quote-reply.png\" width=\"350\" height=\"129\">\n\n-За да известите някой във вашия отговор, споменете неговото име. Напишете  `@` и автоматичния довършител ще се появи.\n\n<img src=\"/images/welcome/username-completion.png\" width=\"230\" height=\"131\">\n\nЗа [стандартни емотикони](http://www.emoji.codes/), просто започнете да пишете `:` или традиционните усмивки `:)` :smile:\n\n## Какво друго мога да правя?\n\nИма бутони за действие в долната част на всяка публикация.\n\n<img src=\"/images/welcome/like-link-flag-bookmark.png\" width=\"169\" height=\"46\"\
+        >\n\nЗа да уведомите някого, че харесвате неговата публикация използвайте бутона **like**. Ако откривате проблем в публикацията лично го уведомете или сигнализирайте на нашия персонал с бутона **flag**\n\nВие също така можете да **споделите** линк в публикацията или да го поставите в **отметки** на вашата потребителска страница за по-късна справка.\n\n## Кой говори за мен?\n\nКогато някой отговори на ваша публикация, цитира ваша публикация, или споменава вашето потребителско име, веднага ще се появи номерче в горния десен ъгъл на страницата. Използвайте го за достъп до вашите **уведомления**\n\n<img src=\"/images/welcome/notification-panel.png\" width=\"178\" height=\"59\">\n\nНе се притеснявайте за изчезнал отговор - ще бъдете директно уведомени по имейла (или с лично съобщение) ако не сте онлайн когато пристигне.\n\n##  Кога разговорите са нови?\n\nПо подразбиране нови са всички разговори, които са на по-малко от два дни и всеки разговор, в който сте взели участие (сте отговорили, сте създали или сте чели продължително време) е проследен.\n\nЩе видите нова синя и цифрова индикация до тези теми:\n\n<img src=\"/images/welcome/topics-new-unread.png\" width=\"368\" height=\"89\">\n\nМожете да промените индивидуалното уведомяване за дадена тема чрез настройките накрая на темата (това също може да се зададе и за всяка категория). За да промените начина за проследяване на темите, или дефинирането на нова, вижте [вашите потребителски предпочитания](%{base_url}/my/preferences)\n\n## Защо не мога да направя някои неща?\n\nНовите потребители са донякъде ограничение от съображения за сигурност. Като вземате участие тук ще спечелите доверието на обществото, ще станете пълноправен член и тези ограничения ще бъдат автоматично премахнати. На по-високо [ниво на доверие](https://meta.discourse.org/t/what-do-user-trust-levels-do/4924) ще имате дори възможността да ни помогнете да управляваме заедно общността.\n\n"
+    welcome_user:
+      subject_template: "Добре дошли в %{site_name}!"
+      text_body_template: |
+        Благодарим Ви, че се присъединихте към %{site_name}, и добре дошли!
+
+        %{new_user_tips}
+
+        Вярваме в [цивилизованото поведение на Общността](%{base_url}/guidelines) през цялото време.
+
+        Насладете се на престоя си!
+
+        (Ако се нуждаете от лична комуникация с [член на персонала](%{base_url}/about) като нов потребител, само отговорете на това лично съобщение.)
+    welcome_invite:
+      subject_template: "Добре дошли в %{site_name}!"
+      text_body_template: |
+        Благодарим Ви че приехте поканата ни за %{site_name} - Добре дошли!
+
+        Ние автоматично създадохме потребителско име за Вас: **%{username}**, но можете да го смените по всяко време като посетите [your user profile][prefs].
+
+        За да влезете отново:
+
+        1. Логнете се по начина, който Ви харесва - но трябва да бъде съвместно със **същия имейл адрес**, на който получихте първоначалната си  покана на имейла. В противен случай ние няма как да сме сигурни, че сте Вие!
+
+        2. Създайте уникална парола за [вашия потребителски профил][предпочитания] и я използвайте, за да се логнете.
+
+        %{new_user_tips}
+
+        Вярваме в [цивилизованото поведение на Общността](%{base_url}/guidelines) през цялото време.
+
+        Насладете се на престоя си!
+
+        (Ако се нуждаете от лична комуникация с [член на персонала](%{base_url}/about) като нов потребител, само отговорете на това лично съобщение.)
+
+        [prefs]: %{user_preferences_url}
+    backup_succeeded:
+      subject_template: "Бекъпа завърши успещно."
+      text_body_template: "Бекъпа беше успешен. Посетете [админ > бекъп секция] (/admin/backups) ,за да го свалите."
+    backup_failed:
+      subject_template: "Бекъпа се провали"
+      text_body_template: |
+        Бекъпа се провали.
+
+
+        Тук е лога:
+
+        ```
+        %{logs}
+        ```
+    restore_succeeded:
+      subject_template: "Възстановяването завърши успешно."
+      text_body_template: "Възстановяването беше успешно."
+    restore_failed:
+      subject_template: "Възстановяването се провали"
+      text_body_template: |
+        Възстановяването се провали.
+
+
+        Тук е лога:
+
+
+        ```
+        %{logs}
+        ```
+    bulk_invite_succeeded:
+      subject_template: "Груповата потребителска покана e обработена успешно"
+      text_body_template: "Вашата групова потребителска покана от файл е обработена, %{sent} имейл покани бяха изпратени."
+    bulk_invite_failed:
+      subject_template: "Груповата потребителска покана завърши с грешки"
+      text_body_template: |
+        Вашият файл за групова покана беше обработен, %{sent} покани са изпратени с %{failed} грешка(и).
+
+        Детайли:
+
+        ```
+        %{logs}
+        ```
+    csv_export_succeeded:
+      subject_template: "Изходящите данни са завършени "
+      text_body_template: |
+        Вашите изходящи данни са успешни! :dvd:
+
+        <a class="attachment" href="%{download_link}">%{file_name}</a>(%{file_size})
+
+        Горната връзка за сваляне ще бъде валидна 48 часа.
+    csv_export_failed:
+      subject_template: "Изходящите данни се провалиха  "
+      text_body_template: "Съжаляваме, но вашите изходящи данни се провалиха. Моля проверете логванията или се свържете с член от персонала."
+    email_reject_trust_level:
+      subject_template: "Проблем с имейла - Недостатъчно Ниво на доверие "
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Вашият акаут няма  необходимото ниво на доверие, за да изпращате нови теми до този имейл адрес. Ако считате, че е станала някаква грешка, моля свържете се с член от персонала.
+    email_reject_no_account:
+      subject_template: "Проблем с имейла - Неизвестен Профил"
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Няма потребителски акаунт с този имейл адрес. Опитайте се да изпратите съобщението от друг имейл адрес, или се свържете с член от персонала.
+    email_reject_empty:
+      subject_template: "Проблем с имейла - Няма съдържание"
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Не открихме никакво съдържание в това съобщение. Уверете се, че вашият отговор е в началото на съобщението - не можем да обработваме инлайн отговори.
+
+        Ако сте получили това и _did_  има съдържание, то опитайте отново със HTML съдържанието от вашия имейл ( не просто обикновен текст).
+    email_reject_parsing:
+      subject_template: "Проблем с имейла - Неразпознато съдържание"
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Не можахме да открием вашият отговор в условното съобщение. **Уверете се, че вашият отговор в началото на съобщението** - не можем да обработваме инлайн отговори.
+    email_reject_post_error:
+      subject_template: "Проблем с имейла - грешка при публикацията "
+      text_body_template: "Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.\n\nВъзможни причини: сложен формат, съобщението е прекалено дълго, съобщението е прекалено късо. Моля опитайте отново, или публикувайте на уеб сайта, ако това продължи. \n"
+    email_reject_post_error_specified:
+      subject_template: "Проблем с имейла - грешка при публикацията "
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Причина:
+
+        %{post_error}
+
+        Ако можете да отстраните проблема, моля опитайте отново.
+    email_reject_reply_key:
+      subject_template: "Проблем с имейла - Неизвестен Reply Key"
+      text_body_template: |
+        Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.
+
+        Невалиден reply key и ние не можем да определим до кого е адресиран вашия отговор. Моля свържете се с член на персонала.
+    email_reject_destination:
+      subject_template: "Проблем с имейла - Неизвестен в : Адреси"
+      text_body_template: "Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено.\n\nНито един от имейлите - дестинации, не е разпознат. Моля уверете се, че имейла на сайта съответства (не е копие), и че изпращате съобщението до правилен имейл адрес,  предоставен от персонала. \n"
+    email_reject_topic_not_found:
+      subject_template: "Проблем с имейла - Темата не е намерена"
+      text_body_template: "Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено. \n\nТемата не е открита, може да е била изтрита. Ако смятате, че е станала грешка, свържете се с член на персонала.\n"
+    email_reject_topic_closed:
+      subject_template: "Проблем с имейла - Темата е затворена"
+      text_body_template: "Съжаляваме, но вашето имейл съобщение до  %{destination} (titled %{former_title}) не може да бъде обработено. \n\nТемата е затворена. Ако смятате, че е станала грешка, свържете се с член на персонала. \n"
+    email_reject_auto_generated:
+      subject_template: "Email проблем -- Автоматично генериран отговор"
+      text_body_template: |
+        Съжаляваме но вашето имейл съобщение до %{destination} (titled %{former_title}) не работи.
+
+        Вашият имейл отговор беше автоматично генериран, което не е приемливо за нас. Ако мислите, че това е грешка, моля свържете се с член на екипа.
+    email_error_notification:
+      subject_template: "Проблем с имейла - грешка при удостоверяването на  POP"
+      text_body_template: |
+        Възникна грешка при удостоверяването докато се преразглеждаха имейлите от  POP сървъра.
+
+        Моля уверете се, че правилно сте конфигурирали POP идентификационните данни в [the site settings](%{base_url}/admin/site_settings/category/email).
+    too_many_spam_flags:
+      subject_template: "Новият профил е блокиран"
+      text_body_template: |
+        Здравейте,
+
+        Това е автоматично съобщение от %{site_name}, за да Ви уведоми, че вашите публикации бяха автоматично скрити, защото е сигнализирано за тях от общността.
+
+        Като предпазна мярка вашият нов профил ще бъде блокиран за създаване на нови отговори и теми, докато член от персонала не го преразгледа.
+
+        За допълнителна информация, моля насочете се към [Правилата на Общността](%{base_url}/guidelines).
+    blocked_by_staff:
+      subject_template: "Блокиран профил"
+      text_body_template: |
+        Това е автоматично съобщение от %{site_name}, за да Ви уведоми, че вашият профил е блокиран от член на персонала.
+
+        За допълнителна информация, моля насочете се към  [Правилата на Общността](%{base_url}/guidelines).
+    user_automatically_blocked:
+      subject_template: "Новият потребител %{username} е блокиран заради потребителски сигнали"
+      text_body_template: |
+        Това е автоматично съобщение.
+
+        Новият потребител [%{username}](%{base_url}%{user_url})  беше автоматично блокиран, защото многократно потребителите са сигнализирали за публикациите (публикацията) на %{username}'s.
+
+        Моля [review the flags](%{base_url}/admin/flags). Ако %{username} е блокиран некоректно, кликнете на отблокирващия бутон на [the admin page for this user](%{base_url}%{user_url}).
+
+        Този праг може да бъде променен от `block_new_user` в настройките на сайта.
+    spam_post_blocked:
+      subject_template: "Публикациите на новия потребител %{username} са блокирани заради повторящите се линкове "
+      text_body_template: |+
+        Това е автоматично съобщение.
+
+        Новият потребител  [%{username}](%{base_url}%{user_url}) многократно се опита да създаде публикации с линкове към %{domains}, но тези публикации бяха блокирани, за се избегне спама. Потребителят все още има възможност да създава нови публикации, които не съдържат линкове към %{domains}.
+
+        Моля [review the user](%{base_url}%{user_url}).
+
+        Това може да бъде променено чрез `newuser_spam_host_threshold` и `white_listed_spam_host_domains` в настройките на сайта.
+
+    unblocked:
+      subject_template: "Профилът е отблокиран"
+      text_body_template: |
+        Здравейте,
+
+        Това е автoмaтично съобщение от  %{site_name} за да Ви уведоми, че вашият профил беше отблокиран след преглед на персонала.
+
+        Можете отново да създавате теми и публикации.
+    pending_users_reminder:
+      subject_template:
+        one: "1 потребител чака одобрение"
+        other: "%{count} потребители чакат одобрение"
+      text_body_template: |
+        Има нови потребителски регистрации, които чакат да бъдат одобрени (отхвърлени) преди да получат достъп до този форум.
+
+        [Please review them in the admin section](%{base_url}/admin/users/list/pending).
+    download_remote_images_disabled:
+      subject_template: "Изтеглянето на отдалечение изображения е забранено"
+      text_body_template: " `download_remote_images_to_local`  настройка беше спряна защото лимита за дисково пространство в `download_remote_images_threshold` беше достигнат."
+  unsubscribe_link: "За да се отпишете от тези имейли, посетете [user preferences](%{user_preferences_url})."
+  subject_re: "Ре: "
+  subject_pm: "[ЛС] "
+  user_notifications:
+    previous_discussion: "Предишни Отговори"
+    unsubscribe:
+      title: "Отписвам"
+      description: "Не сте заинтересувани от тези имейли? Няма проблем! Кликнете по-долу, за да се отпишете веднага:"
+    reply_by_email: "За да  отговорите, пратете отговор на този имейл или посетете %{base_url}%{url} във вашия браузър."
+    visit_link_to_respond: "За да отговорите, посетете %{base_url}%{url} във вашия браузър."
+    posted_by: "Публикувано от  &{username} на %{post_date}"
+    user_invited_to_private_message_pm:
+      subject_template: "[%{site_name}] %{username} ви покани в лично съобщение '%{topic_title}'"
+      text_body_template: |
+        %{username} ви покани към лично съобщение  '%{topic_title}' на %{site_name}:
+
+        Моля посетете тази връзка за да видите темата: %{base_url}%{url}
+    user_replied:
+      subject_template: "[%{site_name}] %{topic_title}"
+      text_body_template: |
+        %{message}
+
+        %{context}
+
+        ---
+        %{respond_instructions}
+    user_quoted:
+      subject_template: "[%{site_name}] %{topic_title} "
+      text_body_template: |
+        %{message}
+
+        %{context}
+
+        ---
+        %{respond_instructions}
+    user_mentioned:
+      subject_template: "[%{site_name}] %{topic_title} "
+      text_body_template: |
+        %{message}
+
+        %{context}
+
+        ---
+        %{respond_instructions}
+    user_posted:
+      subject_template: "[%{site_name}] %{topic_title} "
+      text_body_template: |
+        %{message}
+
+        %{context}
+
+        ---
+        %{respond_instructions}
+    user_posted_pm:
+      subject_template: "[%{site_name}] [PM] %{topic_title} "
+      text_body_template: |
+        %{message}
+
+        %{context}
+
+        ---
+        %{respond_instructions}
+    digest:
+      why: "Кратко резюме на %{site_link} след последното Ви посещение на %{last_seen_at}"
+      subject_template: "[%{site_name}] дайджест за %{date}"
+      new_activity: "Нова активност във вашите теми и публикации:"
+      top_topics: "Популярни публикации"
+      other_new_topics: "Популярни теми"
+      unsubscribe: "Дайжестът е изпращан от %{site_link} когато не сме Ви виждали известно време. За да се отпишете %{unsubscribe_link}."
+      click_here: "кликнете тук"
+      from: "%{site_name} дайджест"
+      read_more: "Прочетете повече"
+      more_topics: "Създадени са още %{new_topics_since_seen} нови теми."
+      more_topics_category: "Още нови теми:"
+      posts:
+        one: "1 публикация"
+        other: "%{count} публикации"
+    forgot_password:
+      subject_template: "[%{site_name}] паролата е възстановена"
+      text_body_template: |
+        Някой поиска да възстанови вашата парола на  [%{site_name}](%{base_url}).
+
+        Ако не сте Вие, можете спокойно да пренебрегнете този имейл.
+
+        Кликнете върху следния линк, за да изберете нова парола:
+        %{base_url}/users/password-reset/%{email_token}
+    set_password:
+      subject_template: "[%{site_name}] Задайте парола"
+      text_body_template: |
+        Някой поиска да добави парола за вашия акаунт на  [%{site_name}](%{base_url}). Алтернативно, можете да влезете използвайки всяка поддържана онлайн услуга (Google, Facebook и т.н.), която е свързана с този валиден имейл адрес.
+
+        Кликнете върху следния линк, за да изберете парола:
+        %{base_url}/users/password-reset/%{email_token}
+    account_created:
+      subject_template: "[%{site_name}] Твоят нов акаунт"
+      text_body_template: |
+        Новият Ви профил за %{site_name} е готов
+
+        Кликнете на следния линк, за да изберете парола за новия си профил:
+        %{base_url}/users/password-reset/%{email_token}
+    authorize_email:
+      subject_template: "[%{site_name}] Потвърдете вашия нов имейл адрес"
+      text_body_template: |
+        Потвърдете вашия нов имейл адрес за %{site_name} като кликнете на следния линк:
+
+        %{base_url}/users/authorize-email/%{email_token}
+    signup_after_approval:
+      subject_template: "Вие бяхте одобрени на %{site_name}!"
+      text_body_template: |
+        Добре дошли в %{site_name}!
+
+        Член на персонала удобри вашия профил в %{site_name}.
+
+        Кликнете върху следния линк, за да потвърдите и активирате вашия нов профил:
+        %{base_url}/users/activate-account/%{email_token}
+
+        Ако следният линк не работи, опитайте да го копирате и поставите в адресното поле на вашия уеб браузър.
+
+        %{new_user_tips}
+
+        Вярваме в [цивилизованото поведение на Общността](%{base_url}/guidelines) през цялото време.
+
+        Насладете се на престоя си!
+
+        (Ако се нуждаете от лична комуникация с [член на персонала](%{base_url}/about) като нов потребител, само отговорете на това лично съобщение.)
+    signup:
+      subject_template: "[%{site_name}] Активирайте вашият нов профил"
+      text_body_template: |
+        Добре дошли в %{site_name}!
+
+        Кликнете на следния линк, за да потвърдите и активирате вашия нов профил:
+        %{base_url}/users/activate-account/%{email_token}
+
+        Ако следният линк не работи, опитайте да го копирате и поставите в адресното поле на вашия уеб браузър.
+  page_not_found:
+    title: "Страницата която търсите не съществува или е лична."
+    popular_topics: "Популярни"
+    recent_topics: "Скорошни"
+    see_more: "Повече"
+    search_title: "Търси този сайт"
+    search_google: "Google"
+  login_required:
+    welcome_message: |
+      #[Добре дошли в %{title}](#welcome)
+      Изисква се потребителски профил. Моля създайте си или влезте, за да продължите.
+  terms_of_service:
+    title: "Правила за ползване"
+    signup_form_message: 'Аз прочетох и приемам  <a href="/tos" target="_blank">правилата за ползване</a>.'
+  deleted: 'изтрит'
+  upload:
+    edit_reason: "изтеглено локално копие на изображенията"
+    unauthorized: "Съжеляваме, Файлът е забранен за качване (разрешени разширения : %{authorized_extensions})."
+    pasted_image_filename: "Публикувани изображения"
+    store_failure: "Грешка при зареждане на  #%{upload_id} за потребителя  #%{user_id}."
+    attachments:
+      too_large: "Съжaляваме, файлът който се опитвате да качите е много голям (максималния позволен размер е %{max_size_kb}%KB)."
+    images:
+      too_large: "Съжаляваме, изображението, което се опитвате да качите е прекалено голямо (максималният размер е %{max_size_kb}%KB), моля преоразмерете го и опитайте отново. "
+      fetch_failure: "Съжаляваме, възникна грешка при извличането на изображението."
+      unknown_image_type: "Съжаляваме, но файла, който се опитвате да качите не е изображение."
+      size_not_found: "Съжаляваме, но не можем да определим размера на изображението. Възможно ли е изображението да е повредено?"
+  flag_reason:
+    sockpuppet: "Нов потребител създаде тема, а друг такъв със същия IP адрес е отговорил. Виж flag_sockpuppets настройки на сайта."
+    spam_hosts: "Този нов потребител се опитва да направи няколко публикации в темата с линкове за един и същи домейн. Виж newuser_spam_host_threshold настройки на сайта."
+  email_log:
+    no_user: "Няма потребител с id %{user_id}"
+    suspended_not_pm: "Потребителят е отстранен, не личното съобщение"
+    seen_recently: "Потребителят скоро е забелязан "
+    post_not_found: "Няма публикация с id %{post_id}"
+    notification_already_read: "Уведомлението, за което е този имейл вече беше прочетено"
+    topic_nil: "post.topic is nil"
+    post_deleted: "публикацията беше изтрита от автора"
+    user_suspended: "потребителят е деактивиран"
+    already_read: "потребителят вече е прочел тази публикация"
+    message_blank: "message е празно"
+    message_to_blank: "message.to е празно"
+    text_part_body_blank: "text_part.body е празно"
+    body_blank: "съдържанието е празно"
+  color_schemes:
+    base_theme_name: "Основа"
+  about: "Относно"
+  guidelines: "Насоки"
+  privacy: "Поверителност"
+  edit_this_page: "Редактирайте тази страница"
+  csv_export:
+    boolean_yes: "Да"
+    boolean_no: "Не"
+  static_topic_first_reply: |
+    Редактирайте първата публикация в тази тема за да промените съдаржанието на страница %{page_name}.
+  guidelines_topic:
+    title: "FAQ/Насоки"
+    body: "<a name=\"civilized\"></a>\n\n## [Това е Цивилизовано Място за Публични Дискусии](#civilized)\n\nМоля отнасяйте се със същото уважение, сякаш сте в публичен парк. Ние сме място за споделяне - общност &mdash; място където се споделят умения, знания и интереси по време на разговорите. Това не са строги и бързи правила, просто помагат за вземането на решения в нашата общност. Използвайте тези насоки, за да запазим чисто и цивилизовано това място.\n\n <a name=\"improve\"></a>\n\n## [Подобряване на Дискусията](#improve)\n\nПомогнете ни да направим това място за дискусии чудесно, като винаги се стараете да подобрите дискусията по някакъв начин, макар и минимален. Ако не сте сигурни, че публикацията Ви се вписва в разговора, помислете върху това, което искате да кажете и опитайте отново по-късно.\n\nОбсъжданите теми тук са важни за нас и искаме и Вие да се отнасяте към тях, сякаш са толкова важни и за Вас. Уважавайте темите и хората, които ги обсъждат, дори и да не сте съгласни с някои от казаните неща.\n\nЕдин от начините за подобряването на дискусията, е осъзнаването на този, който вече съществува. Моля първо отделете малко време да разгледате наличните теми, преди да отговорите на някоя, или да създадете своя, така Вие ще имате по-голям шанс да срещнете други хора, които споделят вашите интереси.\n\n<a name=\"agreeable\"></a>\n\n## [Бъдете любезни, дори и когато не сте съгласни](#agreeable)\n\nАко искате да отговорите на нещо, с което не сте съгласни - отговорете. Но помнете, критикувайте идеите, не хората. Моля избягвайте: \n\n* Споменаването на имена.\n* Целенасочените атаки.\n* Да отговаряте с тон по-различен от действителния в публикацията.\n* Първосигнално противоречие.\n\nВместо това представете мотивирани контра-аргументи, които да подобрят разговора.\n\n<a name=\"participate\"></a>\n\n## [Вашите участия](#participate)\n\nРазговорите, които имаме тук са важни за всички. Помогнете ни да подобрим бъдещето на общността, като се включите в дискусиите, които правят това място интересно &mdash, и като избягвате тези, които го обезличават.\n\nDiscourse предоставя инструменти, които дават възможност на общността колективно да определи най-добрите участия ( най-лошите): любими,\
+      \ отметки, харесвания, сигнали, отговори, редакции и т.н. Използвайте тези инструменти, за да подобрите както собствения си опит, така и на всички останали.\n\nНека се опитаме да направим нашия парк по-добър.\n\n<a name=\"flag-problems\"></a>\n\n## [Ако виждате проблем, сигнализирайте за него](#flag-problems)\n\nМодераторите имат специални права; те са отговорни за този форум. Но  и Вие също. С ваша помощ модераторите могат да бъдат посредници на общността, не са мо представители на закона и реда.\n\nКогато видите лошо поведение не отговаряйте, защото ще насърчи лошото поведение, ще изразходва енергията Ви, и ще изгуби времето Ви. Просто сигнализирайте за него. Ако се съберат достатъчно сигнали, автоматично ще бъде предприето действие или чрез намесата на модератор.\n\nЗа да се запази нашата общност, модераторите си запазват правото да премахват всяко съдържание или всякакви потребителски профили по всякакви причини по всяко време. Модераторите не преразглеждат новите публикации по никакъв начин; модераторите и операторите на сайта не носят отговорност за никакво съдържание, публикувано от общността.\n\n<a name=\"be-civil\"></a>\n\n## [Винаги бъдете любезниl](#be-civil)\n\nНищо друго не може да саботира един добър разговор, както грубостта:\n\n* Бъдете любезни. Не публикувайте нещо, което всеки разумен човек би приел за обидно, оскърбително или казано с омраза.\n* Пазете общността чиста. Не публикувайте неща, които са нецензурни или със сексуален подтекст.\n* Уважавайте се взаимно. Не тормозете и не изнервяйте никого, не интерпретирайте хората, и не излагайте тяхната лична информация.\n* Уважавайте нашия форум. Не публикувайте спам и не се дръжте като варвари във форума.\n\nТова не са конкретни условия с определена дефиниция &mdash; опитайте се да избегнете дори и появата на някои от тези неща. Ако не сте сигурни, попитайте себе си как бихте се почувствали, ако публикацията Ви се появи на корицата на New York Times.\n\nТова е публичен форум и търсачките показват тези дискусии. Дръжте си езика, връзките и изображенията безопасни за вашите приятели и вашето семейство.\n\n<a name=\"keep-tidy\"></a>\n\n## [Пазете го чисто](#keep-tidy)\n\nНаправете усилия да поставите нещата\
+      \ на мястото си, за да можем да прекарваме повече време дискутирайки, а не почиствайки. Така че:\n\n* Не започвайте тема в погрешна категория.\n* Не публикувайте едно и също нещо в няколко теми.\n* Не публикувайте отговори без съдържание.\n* Не се отклонявайте от темата.\n* Не подписвайте вашата публикация &mdash; всяка публикация съдържа профилна информация.\n\nВместо да публикувате \"+1\" или \"Съгласен\", използвайте бутона \"Харесвам\". Вместо да отнасяте вече съществуваща тема в коренно различна посока използвайте Отговор като Свързана Тема.\n\n<a name=\"stealing\"></a>\n\n## [Публикувайте единствено Ваши собствени неща](#stealing)\n\nНе можете да публикувате нищо дигитално, което принадлежи на друг без неговото разрешение. Не можете да публикувате описания, линкове или методи, които са откраднати от нечия интелектуална собственост ( софтуер, видео, аудио, изображения) или пък да нарушавате друг закон.\n\n<a name=\"operated\"></a>\n\n## [Поддържан от Вас](#power)\n\nТози сайт се управлява от вашите [friendly local staff](/about), от Вас, от Общността. Ако имате някакви допълнителни въпроси относно как стоят нещата тук, отворете нова тема в  [meta category](/c/meta) и нека ги обсъдим! Ако има критичен или неотложен проблем, които не може да бъде разрешен с мета тема или сигнал, свържете се с нас чрез [staff page](/about).\n\n<a name=\"tos\"></a>\n\n## [Правила на ползване](#tos)\n\nДа юридическият текст е скучен, но ние трябва да се пазим &ndash; както и Вие и вашите данни &ndash; срещу недружелюбни хора. Ние имаме [Правила на ползване](/tos) описващи вашето ( и нашето) поведение и права свързани с неприкосновеността на съдържание, лично пространство и закони. За да използвате тази услуга трябва да сте съгласни да се придържате към нашите [Правила на ползване](/tos).\n"
+  tos_topic:
+    title: "Правила за ползване"
+    body: "Следните правила и условия уреждат изцяло използването на %{company_domain} уеб сайта и цялото съдържание услугите и продуктите, които са налични на или чрез него, като не се ограничават до %{company_domain}  Forum Software, %{company_domain} Support Forums и  %{company_domain} Hosting service (\"Hosting\"), (taken together, the Website). Уеб сайтът е собственост и се управлява от %{company_full_name} (\"%{company_name}\"). Използването на сайта налага приемането и спазването на всички съдържащи се срокове и условия тук без промяна, както и всички други правила за работа, политики ( включително и не само %{company_domain}’s [Декларация за поверителност](/privacy) и [Правила на Общността](/faq)) и процедури, които могат да се публикуват от време на време на сайта от %{company_name} (колективно, \"Споразумението\").\n\nМоля прочетете това споразумение внимателно преди достъпа Ви до сайта и негово използване. Чрез достъпа си до сайта и използването на която и да е част от него, Вие се съгласявате да бъдете обвързани с правилата и условията на това споразумение. Ако  не сте съгласни с всички срокове и условия на това споразумение, можете да не влизате на сайта или да използвате неговите услуги. Ако тези правила и условия се считат за оферта от %{company_name}, приемането е изрично ограничено до тези условия. Уеб сайтът е е достъпен само за лица над 13 годишна възраст.\n\n<a name=\"1\"></a>\n\n## [1. Вашият %{company_domain} Профил](#1)\n\nАко създадете профил на уеб сайта, Вие сте отговорни за поддържането на неговата сигурност и сте изцяло отговорни за всички дейности, които се извършват чрез него. Незабавно трябва да уведомите %{company_name} за всички злоупотреби с Вашия профил или други нарушения на сигурността. %{company_name} не носи отговорност за каквито и да било действия или пропуски от Ваша страна, включително и всички щети от всякакъв вид, направени в резултата на такива действия или пропуски.\n\n<a name=\"2\"></a>\n\n## [2. Отговорност на Участниците](#2)\n\nАко публикувате материали на сайта, линкове (или позволявате на трети лица да го правят) или по друг начин осигурявате чрез сайта материали (всякакъв вид материали, \"Съдържание\"), Вие сте изцяло отговорни\
+      \ за тяхното съдържание и за всички вреди, които би породило това. Това е така, независимо дали въпросното Съдържание представлява текст, графика аудио файл или компютърен софтуер. Чрез предоставяне на Съдържание Вие гарантирате и декларирате че:\n\n* Свалянето, копирането и използването на Съдържанието няма да наруши правата на собственост, включително и авторските права, патенти, търговски марки, или търговските тайни на трето лице.\n* Ако Вашият работодател има права върху интелектуалната Ви собственост, то Вие трябва (i) да имате разрешение от него да публикувате или да предоставяте Съдържание, включително и не само всеки софтуер, или (ii) да притежавате писмено отказване на Вашия работодател от тези права.\n*  Сте спазили напълно всички лицензи на третата страна, свързани със Съдържанието, и че сте направили всичко необходимо те да преминат успешно през всички задължителни условия, за да стигнат до крайните потребители.\n* Съдържанието не съдържа или не инсталира никакви вируси, червеи, злонамерени софтуери, троянски коне или всякакви други вредни и разрушителни съдържания.\n* Съдържанието не е спам, не е от бот или произволно генерирано, не е неетично или  излишно търговски насочено, не е проектирано за създаване на трафик към сайтовете от третите страни или за повишаване ранга на търсачката, или за други незаконни действия ( като фишинг) или  за да подведе получателите по отношение на източника на материала ( като измама);\n* Съдържанието не е порнографско, не съдържа заплахи или подбуди към насилие, или не нарушава правото на личен живот или публичност на трето лице;\n* Съдържанието не е рекламирано чрез нежелани електронни съобщения като спам линкове за новинарски групи, пощенски списъци, блогове и уеб сайтове, както и други подобни рекламни методи.\n* Името на Вашето Съдържание не подвежда читателите да си мислят, че Вие сте друго лице или фирма;\n* В случай че Съдържанието Ви съдържа компютърен код, Вие точно сте го категоризирали/описали неговия вид, същност, употреба и ефекти на материалите, независимо дали това се изисква от %{company_name} или по друг начин.\n\n<a name=\"3\"></a>\n\n[3. Лиценз за съдържанието на потребителя](#3)\n\nПотребителските участия\
+      \ са лицензирани под  [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US). Без да ограничава нито една от тези декларации или гаранции, %{company_name} има правото (но не и задължение), изцяло по преценка на %{company_name}’s ,  (i) да откаже или премахне всеки материал, който според %{company_name}’s разумно мнение нарушава политиката на  %{company_name} , или по някакъв начин е вредно вредно и неприемливо, или (ii) да прекрати достъпа до употребата на сайта за всяко физическо или юридическо лице по някаква причина, изцяло по преценка на %{company_name}. %{company_name} няма задължението да възстановява изплатените вече суми.\n\n\n<a name=\"4\"></a>\n\n## [4. Заплащане и Подновяване](#4)\n\n\n### General Terms\n\nДопълнителни услуги срещу заплащане или ъпгрейди може да намерите на Уеб сайта. При използване на допълнителна платена услуга или ъпгрейд, Вие се съгласявате да плащате на %{company_name} посочените месечни или годишни такси. Плащанията ще се таксуват на база предварително заплащане в деня, в който започнете използването на услугата или ъпгрейда, за месечен или годишен абонаментен период, в зависимост как е посочено. Тези такси не подлежат на връщане.\n\n### Автоматично Подновяване\n\nАко не уведомите %{company_name}  преди края на приложимия срок за абонамента, че искате да прекратите дадена услуга или ъпгрейд, абонаментът Ви ще бъде подновен автоматично и ни упълномощава да събираме приложимата годишна или месечна такса (както и всички данъци), използвайки всяка кредитна карта или друг механизъм, който сте записали при нас. Абонаментите могат да бъдат отменени по всяко време. \n\n<a name=\"5\"></a>\n\n ## [5. Услуги](#5)\n\n### Хостинг, Поддръжка, Услуги\n\nДопълнителните Хостинг и Поддръжка на услуги могат да бъдат предоставяни от %{company_name} съгласно условията и реда за всяка такава услуга. Като се регистрирате за сметка на Хостинг или Поддръжка на услуги, Вие се съгласявате да спазвате тези правила и условия.\n\n<a name=\"6\"></a>\n\n## [6. Отговорност на потребителите на уеб сайта](#6)\n\n%{company_name} не е прегледал и не може да направи преглед на всички материали,\
+      \ включително компютърни софтуери публикувани на сайта и следователно не може да бъде отговорен за съдържанието на тези материали, използването им или ефектите от тях. При извършване на действие на уеб сайта, %{company_name} не твърди, че подкрепя материала и не подкрепя неговата истинност, точност, полезност или вредност. Вие сте отговорни за вземането на  необходимите предпазни мерки, за да защитите себе си и вашите компютърни системи от вируси, червеи, троянски коне или други вредни и разрушителни съдържания. Възможно е на уеб сайта да има съдържание, което е обидно, неприлично, или по друг начин нередно, както е възможно  в съдържанието да има технически неточности, правописни и други грешки. Уеб сайтът може да съдържа материали, които нарушават правото на личен живот или публичност, както и други права на собственост на трети лица, или за свалянето, копирането, или употребата на материали с определени или неизказани допълни условия. %{company_name} не носи отговорност за вреди, причинени от употребата на сайта от посетителите, или от всяко тяхно теглене на публикуваното съдържание.\n\n<a name=\"7\"></a>\n\n## [7. Съдържания, публикувани в други сайтове](#7)\n\nНие не сме прегледали и не можем да направим преглед на всички материали, включително и компютърните софтуери предоставени под формата на уеб сайтове и уеб страници, на които се прилагат % {company_domain} линкове, и които сочат към% {company_domain}. % {company_name} няма никакъв контрол върху тези, които не са -% {company_domain} уеб сайтове и уеб страници, и не носи отговорност за съдържанието им или тяхното използване. При свързване не чрез %{company_domain} уеб сайт или уеб страница, %{company_name} не твърди, че ги подкрепя. Вие сте отговорни за вземането на необходимите предпазни мерки, за да защитите себе си и вашите компютърни системи от вируси, червеи, троянски коне и други вредни или разрушителни съдържания. %{company_name} не носи отговорност за вреди породени поради използването на други уеб сайтове и уеб страници, а не на %{company_domain} . \n\n<a name=\"8\"></a>\n\n## [8. Нарушения н авторски права и DMCA политика](#8)\n\nКакто %{company_name} иска другите да зачитат правата на интелектуална собственост,\
+      \ така и тя зачита правата на интелектуална собственост на трети лица. Ако смятате, че материалите, разположени на  или свързани с  % {company_domain} нарушават авторските ви права, и ако този сайт пребивава в САЩ, Вие трябва дасе окуражите и да уведомите %{company_name} съгласно %{company_name}’s [Digital Millennium Copyright Act](http://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) (\"DMCA\") Policy. %{company_name} ще отговори на всички такива известия, включително, ако се налага целесъобразно ще се отстрани материала и нарушението,  или ще се деактивират на всички връзки към противозаконните материали. %{company_name} ще прекрати достъпа на посетителя и използването на сайта,и при подходящи обстоятелства, посетителят ще бъде определен като повторен нарушител на авторските права или други права на интелектуална собственост на %{company_name} или други. В случай на такова прекратяване %{company_name} няма да има задължение да възстанови на всички изплатени преди това суми на %{company_name} .\n\n<a name=\"9\"></a>\n\n ## [9. Интелектуална Собственост](#9)\n\nНастоящото споразумение не се прехвърля от %{company_name} към %{company_name} или към трето лице, и всички права и интереси, интелектуалната собственост, правото на собственост и ползите от такова имущество ще остане (както между страните) , само с  %{company_name}. %{company_name}, %{company_domain}, the %{company_domain} логото, както и всички други търговски марки, марки за услуги, графики и лога, използвани във връзка с %{company_domain}, или сайта, са търговски марки или регистрирани търговски марки на %{company_name} или %{company_name}’s лицензори. Други търговски марки, марки за услуги, графики и лога, използвани във връзка с Уеб сайта могат да бъдат търговски марки на други трети страни. Използването на сайта не Ви дава никакво право или лиценз да възпроизвеждате или да използвате по друг начин търговските марки на %{company_name} или на третите лица.\n\n<a name=\"10\"></a>\n\n## [10. Реклами](#10)\n\n%{company_name} запазва правото си да показва реклами във вашето съдържание , освен ако не сте закупили Ad-free Upgrade или Services account.\n\n<a name=\"11\"></a>\n\n## [11. Приписване](#11)\n\n\
+      %{company_name} си запазва правото да покаже връзки като ‘Powered by %{company_domain},’ автора на темата, както и шрифта и лентата с инструментите на вашето съдържание.  Footer кредитите и %{company_domain} и лентата с инструментите немогат да бъдат отстранени, независимо от закупения ъпгрейд.\n\n<a name=\"12\"></a>\n\n## [12. Промени](#12)\n\n%{company_name} си запазва правото, по свое усмотрение, да измени или замени всяка част от настоящото споразумение. Ваша е отговорността този договор да се проверява периодично за промени. Ако продължите да използвате уеб сайта след каквито и да било промени в настоящото споразумени, следва да приемете тези промени. %{company_name} може също, за в бъдеще, да предложат нови услуги и / или функции чрез уеб сайта (включително нови инструменти и ресурси). Тези нови характеристики и / или услуги, задължително трябва да са  предмет на сроковете и условията на настоящото споразумение.\n\n<a name=\"13\"></a>\n\n## [13. Завършване](#13)\n\n %{company_name} може да прекрати достъпа Ви до всички части на уеб сайта по всяко време, със или без причина, с или без предизвестие, действително  веднага. Ако желаете да прекратите настоящото споразумение, или %{company_domain} акаунт  (ако имате такъв), можете просто да прекратите употребата на уеб сайта. Всички разпоредби на настоящото споразумение, които по своята същност трябва да оцелеят при прекратяване, включително без ограничения, разпоредби за собственост, отхвърляне на гаранция, обезщетения и ограничения на отговорността.\n\n<a name=\"14\"></a>\n\n ## [14. Отказ от гаранции](#14)\n\nСайтът се предоставя \"както е\". %{company_name}, неговите доставчици и тези, които дават своите лицензи,  се отказват от всякакви гаранции от всякакъв вид, преки или косвени, включително, без ограничение,  гаранции за продаваемост и годност за определена цел. Нито пък %{company_name}, неговите доставчици и тези, които дават своите лицензи дават гаранция, че сайтът ще бъде без грешки или достъпът до него ще бъде непрекъснат. Ако действително четете това, ето  [a treat](http://www.newyorker.com/online/blogs/shouts/2012/12/the-hundred-best-lists-of-all-time.html). Вие разбирате, че можете да изтеглите или по друг\
+      \ начин да получите желаното съдържание или услуга чрез уеб сайта, по ваша преценка и риск.\n\n<a name=\"15\"></a>\n\n## [15. Ограничение на отговорността](#15)\n\nПри никакви обстоятелства няма %{company_name}, неговите доставчици и тези, които дават своите лицензи да носи отговорност по отношение на всеки предмет на настоящото споразумение, по силата на договор, небрежност, или друго юридическо споразумение за: (i) всички специални, случайни или закономерни щети; (ii) разходите за възлагане на обществени поръчки за заместващи продукти или услуги; (iii) за прекъсване на използването, или загуба, или повреда на данни; или (iv) за всички суми, които надвишават таксите, заплащани от вас на %{company_name} под силата на това споразумение (12) месеца. %{company_name}  не носят отговорност за всяко неизпълнение или забавяне, което се дължи на въпроси извън техния контрол. Горното не се отнася до тези, които са забранени от закона.\n\n<a name=\"16\"></a>\n\n## [16. Обща декларация и гаранция](#16)\n\n Вие гарантирате, че (i)  вашето използване на сайта ще бъде в строго съответствие с %{company_name} [Privacy Policy](/privacy), [Community Guidelines](/guidelines), с настоящото споразумение и с всички приложими закони и разпоредби (включително и на  местните закони или под законови актове във вашата страна, държава, град, или друг правителствен район, по отношение на онлайн поведението и приемливо съдържание, и включително всички приложими закони по отношение на предаването на технически данни изнесени от страната, в която този сайт пребивава или на страната, в която живеете) и (ii) използването на уеб сайта, няма да наруши или злоупотреби с правата и интелектуалната собственост на трети лица.\n\n<a name=\"17\"></a>\n\n## [17. Обезщетение](#17) \n\nВие се съгласявате да обезщетите и предпазвате %{company_name}, нейните изпълнители и техните лицензианти, и техните директори, ръководители, служители, и агенти от и срещу всякакви искове и разноски, включително адвокатски хонорари, произтичащи от вашето използване на сайта, както и да не се нарушава това споразумение.\n\n<a name=\"18\"></a>\n\n[18. Разни](#18)\n\nНастоящото споразумение съставлява цялото споразумение между %{company_name}\
+      \ и относно предмета на договора, той може да бъде променян, единствено писмено подписано от упълномощен изпълнителен директор на %{company_name}, или чрез публикуването от %{company_name} на преработена версия. Ако в обхвата на приложимото право настоящото споразумение не предвижда друго всеки достъп и всяка употреба на сайта ще се ръководят от законите на щата Калифорния, САЩ, с изключение на неговите законови противоречия, и правилното място за всички спорове, произтичащи от или във връзка с  употребата на сайта, ще бъдат държавните и федералните съдилища, намиращи се в Сан Франциско, Калифорния. С изключение на исковете за съдебно или справедливо обезщетение или претенции по отношение на правата върху интелектуалната собственост (които могат да бъдат внесени във всеки компетентен съд, без командироването на една облигация), всеки спор, възникнал по настоящото споразумение, ще бъде окончателно разрешаван в съответствие с Comprehensive Arbitration Rules of the Judicial Arbitration and Mediation Service. (“JAMS”) от трима арбитри, назначени в съответствие с тези правила. Арбитражът се провежда в Сан Франциско, Калифорния, на английски език и  арбитражното решение може да бъде изпълнено във всеки съд. Преобладаващата партия във всяко действие или процедура за прилагане на настоящото споразумение, има право на разноски и адвокатски такси. Ако някоя част от това споразумение е невалидна или неприложима, тази част ще се тълкува като отражение на  първоначалното намерение на страните, както и останалите части ще  си останат в пълна сила. Отказът на всяка от страните от всеки срок или условие на настоящото споразумение или всяко нарушение от него, в никакъв случай, няма да се откаже такав срок или условие или някое следващо нарушение от него. Вие може да прехвърляте правата си по настоящото споразумение на която и да е от страните, която ще се съгласи да се обвърже с Вас при нейните условия; %{company_name} може да прехвърля правата си по настоящото споразумение, без условия. Това споразумение ще бъде обвързващо и ще влиза в употреба в полза на страните, техните наследници и правоприемници.\n\nТози документ е CC-BY-SA. Последно е актуализиран на 31 май 2013г. Приложен първоначално\
+      \ от  [WordPress Terms of Service](http://en.wordpress.com/tos/). \n"
+  privacy_topic:
+    title: "Декларация за поверителност"
+    body: "<a name=\"collect\"></a>\n\n## [Каква информация събираме ние?](#collect)\n\nНие събираме информация от Вас когато се регистрирате на нашия сайт, информация се събира и при вашите участия във форума, когато четете, пишете, както и когато оценявате споделеното тук съдържание. При регистрацията на нашия сайт, е възможно да бъдете помолени да въведете вашето име и вашия имейл адрес. Също така, обаче, Вие можете да посетите нашия сайт и без да се регистрирате. Вашият имейл адрес ще бъде проверен чрез имейл, съдържащ уникален линк. Ако посетите този линк, ние ще знаем, че Вие контролирате имейл адреса. \n\nПри регистрация и при публикация ние записваме IP адреса, от който е публикувано. Ние също така можем и да запазим сървърни логове, които включват  IP адреса на всяко търсене в нашия сървър. \n\n<a name=\"use\"></a>\n\n## [За какво използваме Вашата информация?](#use)\n\nВсяка информация събрана от Вас може да се използва по следните начини:\n\n* За да персонализирате своя опит &mdash; вашата информация ни помага да отговорим по-добре на вашите индивидуални нужди.\n* За да подобрим нашия сайт &mdash; ние непрекъснато се стремим да усъвършенстваме нашите предложения, въз основа на информацията и обратната връзка, която получаваме от Вас.\n* За да подобрим обслужването на клиентите &mdash; вашата информация ни помага да отговорим по-ефективно на вашите заявки за клиентски услуги и нужди от подкрепа. \n* За да изпращате периодични имейли  &mdash; Имейл адреса, който сте ни предоставили може да се използва, за да Ви изпращаме информация, уведомления относно промяната на темите, или при споменаване на вашето потребителско име, относно отговорите на въпросите или по други ваши искания.\n\n<a name=\"protect\">\n\n## [Как защитаваме Вашата информация?](#protect)\n\nНие реализираме различни мерки за сигурност, за да поддържаме сигурността на вашата лична информация която въвеждате, представяте или прибавяте.\n\n<a name=\"data-retention\"></a>\n\n## [Каква е политиката за запазването на Вашите данни?](#data-retention)\n\nНие ще се постараем:\n\n* Да се запазват всички логове съдържащи IP адреса на всички заявки до този сървър, не повече от 90 дни.\n* Да се запазват IP адресите,\
+      \ свързани с регистрираните потребители и техните мнения, не повече от 5 години.\n\n<a name=\"cookies\"></a>\n\n## [Използваме ли бисквитки?](#cookies)\n\nДа. Бисквитките са малки файлове, които сайтът или неговият доставчик прехвърля на твърдия диск на компютъра Ви чрез вашия уеб браузър ( ако позволите). Тези бисквитки помагат на сайта да разпознае вашия браузър и ако имате регистриран акаунт, да се свърже с него. \n\nНие използваме бисквитките, за да разберем и запомним вашите предпочитания за бъдещите Ви посещения, и за да се събират данни за трафика и взаимодействията на сайта, за да имаме възможността да предложим по-добра практика и инструменти за в бъдеще. Възможно е сключването на договори с външни доставчици на услуги, за да подобрим разбирането на нашите посетители. Тези доставчици нямат право да използват от наше име събраната информация, освен ако не ни помагат с ръководенето и усъвършенстването на нашата дейност.\n\n<a name=\"disclose\"></a>\n\n## [Разкриваме ли Вашата информация на външни лица?](#disclose)\n\nНие не продаваме, не търгуваме и по никакъв друг начин не прехвърляме на външни лица вашата лична информация. Това не включва доверени трети страни, които ни помагат в управлението на нашия сайт, провеждането на нашия бизнес, или вашето обслужване, ако не сме се споразумели с тези страни да запазят поверителността на тази информация. Също така ние можем да освободим вашата информация, ако вярваме, че това е уместно, че е съобразено със закона и прилаганите от нас политики, или в защита на нашите или други права, собственост и безопасност. Обаче не-личната информация на потребителя може да бъде доставена на другите страни за маркетинг, реклама или за други цели.\n\n<a name=\"third-party\"></a>\n\n## [Трета страна сайтове](#third-party)\n\nПонякога по наша преценка, ние можем да включим или да предложим на трети лица продукти или услуги на нашия сайт. Тези сайтове - третите страни имат отделна и независима политика за поверителност. Ето защо ние не носим отговорност за съдържанието и дейностите на тези сайтове. Въпреки това ние се стремим да защитим целостта на нашия сайт и да приветстваме всяка обратна връзка от тези сайтове.\n\n<a name=\"coppa\"></a>\n\
+      \n## [Children's Online Privacy Protection Act Compliance](#coppa)\n\nНашият сайт, нашите продукти и услуги са насочени към всички хора, които са на най-малко 13 годишна възраст. Ако този сървър е в САЩ и Вие сте под 13 години, съгласно изискванията на COPPA [Children's Online Privacy Protection Act](http://en.wikipedia.org/wiki/Children)), не използвайте този сайт.\n\n<a name=\"online\"></a>\n\n## [Online Privacy Policy Only](#online)\n\nТази онлайн декларация за сигурност се прилага само за информация събрана чрез нашия сайт, а не за информация събрана офлайн.\n\n<a name=\"consent\"></a>\n\n## [Вашето Съдържание](#consent)\n\nЧрез използването на нашия сайт Вие се съгласявате с декларацията за \nповерителност на нашия сайт.\n\n<a name=\"changes\"></a>\n\n\n## [Промени в нашата Политика за Поверителност](#changes)\n\nАко решим да променим политиката си за поверителност, ще публикуваме промените на тази страница.\n\nТози документ е CC-BY-SA.. Последно е актуализиран на 31 май 2013г. \n\n"
+  static:
+    search_help: |
+      <h2>Съвети</h2>
+      <p>
+      <ul>
+      <li>Резултатите са приоретизирани, така че когато се съмнявате търсете за теми</li>
+      <li>Уникалните и редки думи винаги дават най-добри резултати</li>
+      <li>Винаги когато е възможно, отделете вашето търсене до определена категория, потребител или тема</li>
+      </ul>
+      </p>
+      <h2>Опции</h2>
+      <p>
+      <table>
+      <tr><td><code>order:views</code></td><td><code>order:latest</code></td><td colspan=3></td></tr>
+      <tr><td><code>status:open</code></td><td><code>status:closed</code></td><td><code>status:archived</code></td><td><code>status:noreplies</code></td><td><code>status:singleuser</code></td></tr>
+      <tr><td><code>category:foo</code></td><td><code>user:foo</code></td><td colspan=3></td></tr>
+      <tr><td><code>in:likes</code></td><td><code>in:posted</code></td><td><code>in:watching</code></td><td><code>in:tracking</code></td><td><code>in:private</code></td></tr>
+      <tr><td><code>in:bookmarks</code></td><td colspan=4></td></tr>
+      </table>
+      </p>
+      <p>
+      <code>лаф категория:разни статуси: в отворен ред:последните</code> ще търси за теми, които не съдържат думата "лаф" и са в категория "разни", подредени по дата на последна публикация. Не се търси в архивирани или затворени теми.
+      </p>
+  badges:
+    long_descriptions:
+      first_flag: |+
+        Докладването на постове е важно за атмосферата на форума. Ако забележите постове, изискващи модераторска намеса, моля
+        не се колебайте да ги докладвате. Може да иползвате диалоговия прозорец за докладване, за да изпратите <b>лични съобщения</b> на потребителите
+        след дотигането на ниво на доверие 1.
+
+...

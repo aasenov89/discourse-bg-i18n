@@ -589,6 +589,7 @@ bg:
         instructions: "Фонът ще бъде центриран и ще има дължина 590 пиксела."
       email:
         title: "Имейл"
+        instructions: "не се показва публично"
         ok: "Ще Ви изпратим имейл за потвърждение."
         invalid: "Моля, въведете валиден имейл адрес"
         authenticated: "Вашият имейл беше потвърден от {{provider}}."
@@ -598,11 +599,13 @@ bg:
           other: "Ние ще ви изпратим имейл само ако не сме ви виждали през последните {{count}} минути."
       name:
         title: "Име"
+        instructions: "вашето пълно име (опционално)"
         instructions_required: "Вашето пълно име"
         too_short: "Името е твърде кратко."
         ok: "Вашето име изглежда добре"
       username:
         title: "Потребителско име"
+        instructions: "уникално, без интервали"
         short_instructions: "Хора могат да Ви споменават като @{{username}}"
         available: "Вашето потребителско име е свободно"
         not_available: "Не е налично. Пробвайте с {{suggestion}}?"
@@ -708,6 +711,7 @@ bg:
         same_as_username: "Вашата парола е същата като вашето потребителско име."
         same_as_email: "Вашата парола е същата като вашия email."
         ok: "Вашата парола изглежда добре."
+        instructions: "поне %{count}знака"
       summary:
         title: "Сумарно"
         stats: "Статистика"
@@ -842,6 +846,7 @@ bg:
     trust_level: 'Ниво на доверие'
     search_hint: 'потребителско име, имейл или IP адрес'
     create_account:
+      disclaimer: "С регистрацията си се съгласявате с <a href='{{privacy_link}}'> политиката за повелителност</a> и <a href='{{tos_link}}'>условията за ползване</a>."
       title: "Създай нов профил"
       failed: "Нещо се случи, вероятно вече има регистрация с този имейл адрес, опитайте с линка за забравена парола."
     forgot_password:
@@ -911,6 +916,7 @@ bg:
       alt: 'Alt'
     select_kit:
       default_header_text: Изберете...
+      min_content_not_reached: "Изберете поне {{count}} "
     composer:
       emoji: "Емошънка :)"
       more_emoji: "още..."
@@ -1740,6 +1746,8 @@ bg:
         reply_post: '<b>r</b> Отговорете на публикация'
     badges:
       title: Значки
+      allow_title: "Може да използвате тази значка като титла."
+      successfully_granted: "Успешно дадохте %{badge}на %{username}"
     tagging:
       all_tags: "Всички тагове"
       other_tags: "Други тагове"

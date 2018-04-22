@@ -1,30 +1,34 @@
-# encoding: utf-8
-# This file contains content for the client portion of Discourse, sent out
-# to the Javascript app.
-#
-# To work with us on translations, see:
-# https://www.transifex.com/projects/p/discourse-org/
-#
-# This is a "source" file, which is used by Transifex to get translations for other languages.
-# After this file is changed, it needs to be pushed by a maintainer to Transifex:
-#
-#   tx push -s
-#
-# Read more here: https://meta.discourse.org/t/contribute-a-translation-to-discourse/14882
-#
-# To validate this YAML file after you change it, please paste it into
-# http://yamllint.com/
-
-tr:
+bg:
   js:
     poll:
-      voteCount:
-        one: "1 vote"
-        other: "%{count} votes"
-
-      results:
-        show: Show Results
-        hide: Hide Results
-
-      close_poll: "Close Poll"
-      open_poll: "Open Poll"
+      voters:
+        one: "гласуващ"
+        other: "Гласуващи "
+      total_votes:
+        one: "общ брой гласове"
+        other: "общо гласове"
+      average_rating: "Средна отценка: <strong>%{average}</strong>."
+      cast-votes:
+        title: "Изчислете вашите гласове"
+        label: "Гласувай сега!"
+      show-results:
+        title: "Покажи резултатите от гласуването"
+        label: "Покажи резултатите"
+      hide-results:
+        title: "Обратно към вашите гласове"
+        label: "Скрий резултатите"
+      open:
+        title: "Отвори гласуването"
+        label: "Отвори"
+        confirm: "Сигурни ли сте, че искате да отворите гласуването ?"
+      close:
+        title: "Затвори гласуването"
+        label: "Затвори"
+        confirm: "Сигурни ли сте, че искате да затворите гласуването?"
+      ui_builder:
+        poll_type:
+          label: Тип
+        poll_config:
+          max: Максимално
+          min: Минимално
+          step: Стъпка

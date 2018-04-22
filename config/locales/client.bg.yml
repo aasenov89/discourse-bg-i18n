@@ -415,7 +415,7 @@ bg:
       '14': "Чакащи"
     categories:
       all: "всички категории"
-      all_subcategories: "всички%{categoryName}"
+      all_subcategories: "всички %{categoryName}"
       no_subcategory: "без подкатегория"
       category: "Категории"
       category_list: "Покажи списък с категориите"

@@ -132,6 +132,7 @@ bg:
         disabled: 'премахната от списъка  %{when}'
     topic_admin_menu: "администриране на темата"
     emails_are_disabled: "Всички изходящи имейли са изцяло забранени от администратора. Няма да бъдат изпращани никакви имейл известия."
+    bootstrap_mode_enabled: "За да помогнем със стартирането на вашия нов сайт по-лесно поставихме сайта в  \"стартиращо режим\". Всички нови потребители ще получат ниво на доверие 1 и ще имат активирани дневни известия за активноста във форума. Този режим ще бъде автоматично спрян когато бройката регистрирани потребители стигне %{min_users} ."
     themes:
       default_description: "По подразбиране"
     s3:
@@ -414,6 +415,7 @@ bg:
       '14': "Чакащи"
     categories:
       all: "всички категории"
+      all_subcategories: "всички%{categoryName}"
       no_subcategory: "без подкатегория"
       category: "Категории"
       category_list: "Покажи списък с категориите"
@@ -1102,6 +1104,7 @@ bg:
     topic:
       create: 'Нова тема'
       create_long: 'Създайте нова тема'
+      open_draft: "Довърши ревизия"
       private_message: 'Започни съобщение'
       archive_message:
         help: 'Преместете съобщението в архив'
@@ -1146,26 +1149,26 @@ bg:
       show_links: "покажи връзките в тази тема"
       toggle_information: "Показване / скриване на подробна информация за дадена тема "
       read_more_in_category: "Искате да прочетете повече ? Разгледайте други теми в {{catLink}} или {{latestLink}}."
-      read_more: "Искате да прочетете повече? {{catLink}} или {{latestLink}}."
-      read_more_MF: "Ето { UNREAD, plural, =0 {} one { <a href='/unread'>1 непрочетено</a> } other { <a href='/unread'># непрочетено </a> } } { NEW, plural, =0 {} one { {BOTH, select, true{and } false {is } other{}} <a href='/new'>1 нова </a> тема} other { {BOTH, select, true{and } false {are } other{}} <a href='/new'># теми </a>} } напомняне, или {CATEGORY, select, true {потърски други теми в {catLink}} погрешен {{latestLink}} other {}}."
-      browse_all_categories: "Прегледай всички категории"
-      view_latest_topics: "виж последните теми"
-      suggest_create_topic: "Защо не създадете тема ?"
-      jump_reply_up: "към по ранен отговор"
-      jump_reply_down: "към по-късен отговор"
+      read_more: "Искате да прочетете повече ? {{catLink}} или {{latestLink}}."
+      read_more_MF: "Ето { UNREAD, plural, =0 {} one { <a href='/unread'>1 непрочетено</a> } other { <a href='/unread'># непрочетено </a> } } { NEW, plural, =0 {} one { {BOTH, select, true{and } false {is } other{}} <a href='/new'>1 нова </a> тема} other { {BOTH, select, true{and } false {are } other{}} <a href='/new'># теми </a>} } напомняне, или {CATEGORY, select, true {потърски други теми в {catLink}} погрешен {{latestLink}} other {}}"
+      browse_all_categories: Прегледай всички категории
+      view_latest_topics: виж последните теми
+      suggest_create_topic: Защо не създадете тема ?
+      jump_reply_up: към по ранен отговор
+      jump_reply_down: към по-късен отговор
       deleted: "Темата беше изтрита"
       auto_close_title: 'Настройки за автоматично затваряне'
       timeline:
         back: "Назад"
       progress:
-        title: "прогрес на темата"
+        title: прогрес на темата
         go_top: "горе"
         go_bottom: "долу"
         go: "go"
         jump_bottom: "към последната публикация"
         jump_bottom_with_number: "отиди на публикация %{post_number}"
-        total: "всички публикации"
-        current: "текуща публикация"
+        total: всички публикации
+        current: текуща публикация
       notifications:
         reasons:
           '3_6': 'Ще получавате известия, защото наблюдавате тази категория'
@@ -1323,7 +1326,7 @@ bg:
         select: 'избери'
         selected: 'избрани ({{count}})'
         delete: 'изтрий избраните '
-        cancel: 'прекрати избирането'
+        cancel: прекрати избирането
         select_all: 'избери всички '
         deselect_all: 'премахване на всички '
         description:
@@ -2405,20 +2408,20 @@ bg:
         badge_grouping: Група
         badge_groupings:
           modal_title: Групи значки
-        granted_by: 'Присъдена от'
+        granted_by: Присъдена от
         granted_at: Присъдена на
         reason_help: (Връзка към публикация или тема)
-        save: 'Запази'
-        delete: 'Изтрий'
-        delete_confirm: 'Искате ли да изтриете тази значка?'
-        revoke: 'Анулирай'
-        reason: 'Причина'
-        expand: 'Разширяване &hellip;'
-        revoke_confirm: 'Сигурни ли сте, че искате да анулирате значката?
-        edit_badges: 'Редактирай значката
-        grant_badge: 'Присъдени значка'
-        granted_badges: 'Присъединени значки'
-        grant: 'Присъдете'
+        save: Запази
+        delete: Изтрий
+        delete_confirm: Искате ли да изтриете тази значка?
+        revoke: Анулирай
+        reason: Причина
+        expand: Разширяване &hellip;
+        revoke_confirm: Сигурни ли сте, че искате да анулирате значката?
+        edit_badges: Редактирай значката
+        grant_badge: Присъдени значка
+        granted_badges: Присъединени значки
+        grant: Присъдете
         no_user_badges: "%{name} няма присъдени значки."
         no_badges: Няма значки които биха могли да се присъдят.
         none_selected: "Изберете значка за да започнете."

@@ -1323,7 +1323,7 @@ bg:
         select: 'избери'
         selected: 'избрани ({{count}})'
         delete: 'изтрий избраните '
-        cancel: прекрати избирането
+        cancel: 'прекрати избирането'
         select_all: 'избери всички '
         deselect_all: 'премахване на всички '
         description:
@@ -2405,20 +2405,20 @@ bg:
         badge_grouping: Група
         badge_groupings:
           modal_title: Групи значки
-        granted_by: Присъдена от
+        granted_by: 'Присъдена от'
         granted_at: Присъдена на
         reason_help: (Връзка към публикация или тема)
-        save: Запази
-        delete: Изтрий
-        delete_confirm: Искате ли да изтриете тази значка?
-        revoke: Анулирай
-        reason: Причина
-        expand: Разширяване &hellip;
-        revoke_confirm: Сигурни ли сте, че искате да анулирате значката?
-        edit_badges: Редактирай значката
-        grant_badge: Присъдени значка
-        granted_badges: Присъединени значки
-        grant: Присъдете
+        save: 'Запази'
+        delete: 'Изтрий'
+        delete_confirm: 'Искате ли да изтриете тази значка?'
+        revoke: 'Анулирай'
+        reason: 'Причина'
+        expand: 'Разширяване &hellip;'
+        revoke_confirm: 'Сигурни ли сте, че искате да анулирате значката?
+        edit_badges: 'Редактирай значката
+        grant_badge: 'Присъдени значка'
+        granted_badges: 'Присъединени значки'
+        grant: 'Присъдете'
         no_user_badges: "%{name} няма присъдени значки."
         no_badges: Няма значки които биха могли да се присъдят.
         none_selected: "Изберете значка за да започнете."

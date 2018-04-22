@@ -3,7 +3,7 @@ discourse-bg-i18n
 
 Bulgarian locale files for discourse
 
-Idea based on https://github.com/lidel/discourse-locale-override 
+Idea based on https://github.com/lidel/discourse-locale-override
 
 This repo is used to load Bulgarian localization files while bootstrapping or rebuilding a discourse docker instance.
 
@@ -32,21 +32,9 @@ hooks:
     - exec:
         cd: /tmp
         cmd:
-          - git clone https://github.com/taypo/discourse-turkish-i18n-kpn.git
-          - cp -rT discourse-turkish-i18n/ /var/www/discourse/
-          - rm -rf discourse-turkish-i18n
-```
-
-
-```haml
-- exec:
-        cd: /tmp
-        cmd:
-          - git clone https://github.com/tarakanbg/discourse-bg-i18n.git
+          - git clone https://github.com/aasenov89/discourse-bg-i18n.git
           - cp -rT discourse-bg-i18n/ /var/www/discourse/
           - cp -f discourse-bg-i18n/reload_i18n.sh /root/reload_i18n.sh
           - chmod +x /root/reload_i18n.sh
           - rm -rf discourse-bg-i18n
-
-
 ```
